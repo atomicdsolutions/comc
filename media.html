@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media | Getting My Cheese Back On My Cracker Foundation</title>
+    <meta name="description" content="Access GMCBOMC Foundation's media content: podcasts, live streams, and videos supporting Black and Brown mental health communities.">
+    <meta name="keywords" content="GMCBOMC podcasts, Black mental health media, BIPOC wellness videos, mental health live streams, culturally competent content">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Media | GMCBOMC Foundation">
+    <meta property="og:description" content="Access our podcasts, live streams, and videos supporting Black and Brown mental health communities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://atomicdsolutions.github.io/comc/media.html">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'orange': {
+                            500: '#FF9500'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS for navigation -->
+    <style>
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+        
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="nav-logo">
+                    <h2 class="text-2xl font-bold text-gray-900">GMCBOMC Foundation</h2>
+                </div>
+                <ul class="nav-menu hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Home</a></li>
+                    <li><a href="about.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">About</a></li>
+                    <li><a href="programs.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Programs</a></li>
+                    <li><a href="resources.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Resources</a></li>
+                    <li><a href="media.html" class="nav-link text-orange-500 font-semibold">Media</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Contact</a></li>
+                    <li><a href="#donate" class="nav-link bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">Donate</a></li>
+                </ul>
+                <button class="hamburger md:hidden flex flex-col justify-center items-center w-16 h-16 cursor-pointer p-3 -mr-3 bg-transparent border-none outline-none focus:outline-none active:scale-95 transition-transform" type="button" aria-label="Toggle mobile menu">
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <ul class="nav-menu mobile-menu md:hidden bg-gray-900 bg-opacity-95 absolute top-full left-0 right-0 px-4 py-6 space-y-4">
+                <li><a href="index.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Home</a></li>
+                <li><a href="about.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">About</a></li>
+                <li><a href="programs.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Programs</a></li>
+                <li><a href="resources.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Resources</a></li>
+                <li><a href="media.html" class="nav-link block text-orange-500 font-semibold py-2">Media</a></li>
+                <li><a href="#contact" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Contact</a></li>
+                <li><a href="#donate" class="nav-link block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-purple-50 to-indigo-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl font-bold text-gray-900 mb-6 font-serif">Media</h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">Explore our podcasts, live streams, and video content created to support mental wellness and break stigma in Black and Brown communities.</p>
+        </div>
+    </section>
+
+    <!-- Media Types Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Media Content</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Authentic conversations, educational content, and community support through various media formats</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Podcasts -->
+                <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border border-purple-200 hover:shadow-lg transition-shadow">
+                    <div class="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-6">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Podcasts</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Three distinct podcasts offering authentic conversations about mental health, culture, and community experiences in Black and Brown communities.</p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Weekly episodes with mental health focus</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Guest experts and community voices</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Available on all major platforms</p>
+                        </div>
+                    </div>
+                    <a href="podcasts.html" class="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">
+                        Explore Podcasts <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Live Streams -->
+                <div class="bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-2xl border border-red-200 hover:shadow-lg transition-shadow">
+                    <div class="w-20 h-20 bg-red-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-6">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Live Streams</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Interactive live streaming sessions featuring real-time conversations, Q&A sessions, and community discussions about mental health and wellness.</p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Interactive real-time discussions</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Live Q&A with mental health experts</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Community chat and engagement</p>
+                        </div>
+                    </div>
+                    <a href="live-stream.html" class="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">
+                        Watch Live <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Videos -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-200 hover:shadow-lg transition-shadow">
+                    <div class="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-6">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Videos</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">Educational videos, recorded sessions, and inspirational content from our YouTube channel focused on mental health awareness and community support.</p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Educational mental health content</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Recorded live sessions and events</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p class="text-gray-700">Community stories and testimonials</p>
+                        </div>
+                    </div>
+                    <a href="videos.html" class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">
+                        Watch Videos <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Content -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Content</h2>
+                <p class="text-xl text-gray-600">Latest episodes, upcoming streams, and popular videos</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Latest Podcast Episode -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-full h-48 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl mb-6 flex items-center justify-center text-white">
+                        <i class="fas fa-microphone text-4xl"></i>
+                    </div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">Latest Episode</span>
+                        <span class="text-gray-500 text-sm">2 days ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Breaking Mental Health Stigma in the Workplace</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">A conversation about navigating mental health challenges in professional environments...</p>
+                    <a href="podcasts.html" class="text-purple-500 font-semibold hover:text-purple-600 transition-colors inline-flex items-center">
+                        Listen Now <i class="fas fa-play ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Next Live Stream -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-full h-48 bg-gradient-to-br from-red-400 to-red-600 rounded-xl mb-6 flex items-center justify-center text-white">
+                        <i class="fas fa-video text-4xl"></i>
+                    </div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Live Stream</span>
+                        <span class="text-gray-500 text-sm">Tomorrow 7PM ET</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Community Mental Health Check-In</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Join us for an open discussion about community support and mental wellness...</p>
+                    <a href="live-stream.html" class="text-red-500 font-semibold hover:text-red-600 transition-colors inline-flex items-center">
+                        Join Stream <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Popular Video -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-full h-48 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl mb-6 flex items-center justify-center text-white">
+                        <i class="fab fa-youtube text-4xl"></i>
+                    </div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">Popular Video</span>
+                        <span class="text-gray-500 text-sm">1.2K views</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">5 Self-Care Practices for Busy Caregivers</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Essential self-care strategies for those who spend their time caring for others...</p>
+                    <a href="videos.html" class="text-blue-500 font-semibold hover:text-blue-600 transition-colors inline-flex items-center">
+                        Watch Video <i class="fas fa-play ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Stay Connected with Our Content</h2>
+            <p class="text-xl text-gray-300 mb-10 leading-relaxed">Subscribe to our channels and never miss new episodes, live streams, or educational videos.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#podcast-subscribe" class="bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center">
+                    <i class="fas fa-microphone mr-3"></i>Subscribe to Podcasts
+                </a>
+                <a href="#youtube-subscribe" class="bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center">
+                    <i class="fab fa-youtube mr-3"></i>Subscribe on YouTube
+                </a>
+                <a href="#notifications" class="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center">
+                    <i class="fas fa-bell mr-3"></i>Get Notifications
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Getting My Cheese Back On My Cracker Foundation</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Improving mental health and wellness within Black and Brown communities.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition-colors">Resources</a></li>
+                        <li><a href="media.html" class="text-gray-400 hover:text-white transition-colors">Media</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#volunteer" class="text-gray-400 hover:text-white transition-colors">Volunteer</a></li>
+                        <li><a href="#donate" class="text-gray-400 hover:text-white transition-colors">Donate</a></li>
+                        <li><a href="#partner" class="text-gray-400 hover:text-white transition-colors">Partner With Us</a></li>
+                        <li><a href="#newsletter" class="text-gray-400 hover:text-white transition-colors">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Stay Connected</h4>
+                    <form class="newsletter-form space-y-3">
+                        <input type="email" placeholder="Enter your email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Getting My Cheese Back On My Cracker Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

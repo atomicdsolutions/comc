@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcasts | Getting My Cheese Back On My Cracker Foundation</title>
+    <meta name="description" content="Listen to GMCBOMC Foundation's three podcasts focusing on Black and Brown mental health, community conversations, and culturally competent wellness support.">
+    <meta name="keywords" content="GMCBOMC podcasts, Black mental health podcasts, BIPOC wellness shows, culturally competent mental health audio, community conversation podcasts">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Podcasts | GMCBOMC Foundation">
+    <meta property="og:description" content="Listen to our three podcasts focusing on Black and Brown mental health and community wellness.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://atomicdsolutions.github.io/comc/podcasts.html">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'orange': {
+                            500: '#FF9500'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS for navigation -->
+    <style>
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+        
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="nav-logo">
+                    <h2 class="text-2xl font-bold text-gray-900">GMCBOMC Foundation</h2>
+                </div>
+                <ul class="nav-menu hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Home</a></li>
+                    <li><a href="about.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">About</a></li>
+                    <li><a href="programs.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Programs</a></li>
+                    <li><a href="resources.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Resources</a></li>
+                    <li><a href="media.html" class="nav-link text-orange-500 hover:text-orange-600 font-medium transition-colors">Media</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Contact</a></li>
+                    <li><a href="#donate" class="nav-link bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">Donate</a></li>
+                </ul>
+                <button class="hamburger md:hidden flex flex-col justify-center items-center w-16 h-16 cursor-pointer p-3 -mr-3 bg-transparent border-none outline-none focus:outline-none active:scale-95 transition-transform" type="button" aria-label="Toggle mobile menu">
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <ul class="nav-menu mobile-menu md:hidden bg-gray-900 bg-opacity-95 absolute top-full left-0 right-0 px-4 py-6 space-y-4">
+                <li><a href="index.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Home</a></li>
+                <li><a href="about.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">About</a></li>
+                <li><a href="programs.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Programs</a></li>
+                <li><a href="resources.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Resources</a></li>
+                <li><a href="media.html" class="nav-link block text-orange-500 font-semibold py-2">Media</a></li>
+                <li><a href="#contact" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Contact</a></li>
+                <li><a href="#donate" class="nav-link block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-purple-50 to-violet-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl font-bold text-gray-900 mb-6 font-serif">Our Podcasts</h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">Three authentic podcast shows creating safe spaces for mental health conversations in Black and Brown communities.</p>
+        </div>
+    </section>
+
+    <!-- Podcasts Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Shows</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Each podcast brings a unique perspective to mental health, culture, and community healing</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <!-- Podcast 1 -->
+                <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border border-purple-200 hover:shadow-lg transition-shadow flex flex-col h-full">
+                    <div class="w-24 h-24 bg-purple-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 mx-auto">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 text-center">Getting My Cheese Back On My Cracker</h3>
+                    <p class="text-purple-500 font-semibold mb-4 text-center">The Original Show</p>
+                    <p class="text-gray-700 leading-relaxed mb-6 flex-grow text-center">Our flagship podcast where it all began. Raw, authentic conversations about mental health, vulnerability, and finding your way back to wholeness.</p>
+                    <div class="text-center mb-6">
+                        <div class="inline-flex items-center gap-4 text-sm text-gray-600">
+                            <span><i class="fas fa-calendar mr-2"></i>Weekly</span>
+                            <span><i class="fas fa-clock mr-2"></i>45 min</span>
+                            <span><i class="fas fa-microphone mr-2"></i>150 episodes</span>
+                        </div>
+                    </div>
+                    <a href="podcast-gmcbomc.html" class="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors block text-center mt-auto">
+                        Listen Now
+                    </a>
+                </div>
+
+                <!-- Podcast 2 -->
+                <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-2xl border border-teal-200 hover:shadow-lg transition-shadow flex flex-col h-full">
+                    <div class="w-24 h-24 bg-teal-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 mx-auto">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 text-center">Community Conversations</h3>
+                    <p class="text-teal-500 font-semibold mb-4 text-center">Healing Together</p>
+                    <p class="text-gray-700 leading-relaxed mb-6 flex-grow text-center">Deep dives into community mental health topics with guests sharing lived experiences and professional insights.</p>
+                    <div class="text-center mb-6">
+                        <div class="inline-flex items-center gap-4 text-sm text-gray-600">
+                            <span><i class="fas fa-calendar mr-2"></i>Bi-weekly</span>
+                            <span><i class="fas fa-clock mr-2"></i>60 min</span>
+                            <span><i class="fas fa-microphone mr-2"></i>85 episodes</span>
+                        </div>
+                    </div>
+                    <a href="podcast-community.html" class="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors block text-center mt-auto">
+                        Listen Now
+                    </a>
+                </div>
+
+                <!-- Podcast 3 -->
+                <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl border border-orange-200 hover:shadow-lg transition-shadow flex flex-col h-full">
+                    <div class="w-24 h-24 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 mx-auto">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3 text-center">Mental Wellness Spotlight</h3>
+                    <p class="text-orange-500 font-semibold mb-4 text-center">Expert Insights</p>
+                    <p class="text-gray-700 leading-relaxed mb-6 flex-grow text-center">Educational episodes featuring mental health professionals discussing culturally competent care and wellness strategies.</p>
+                    <div class="text-center mb-6">
+                        <div class="inline-flex items-center gap-4 text-sm text-gray-600">
+                            <span><i class="fas fa-calendar mr-2"></i>Monthly</span>
+                            <span><i class="fas fa-clock mr-2"></i>30 min</span>
+                            <span><i class="fas fa-microphone mr-2"></i>45 episodes</span>
+                        </div>
+                    </div>
+                    <a href="podcast-wellness.html" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors block text-center mt-auto">
+                        Listen Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Podcast Platforms -->
+            <div class="bg-gray-50 p-8 rounded-2xl text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Listen on Your Favorite Platform</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">
+                        <i class="fab fa-apple mr-3"></i>Apple Podcasts
+                    </a>
+                    <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">
+                        <i class="fab fa-spotify mr-3"></i>Spotify
+                    </a>
+                    <a href="#" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">
+                        <i class="fab fa-google mr-3"></i>Google Podcasts
+                    </a>
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">
+                        <i class="fas fa-rss mr-3"></i>RSS Feed
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Episodes -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Latest Episodes</h2>
+                <p class="text-xl text-gray-600">Recent conversations from all our shows</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Episode 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-full h-48 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl mb-6 flex items-center justify-center text-white">
+                        <i class="fas fa-microphone text-4xl"></i>
+                    </div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">GMCBOMC</span>
+                        <span class="text-gray-500 text-sm">Episode 152</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Breaking Mental Health Stigma in the Workplace</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">A conversation about navigating mental health challenges in professional environments and advocating for yourself at work.</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fas fa-clock mr-1"></i>42 min</span>
+                        <span><i class="fas fa-calendar mr-1"></i>2 days ago</span>
+                    </div>
+                    <a href="podcast-gmcbomc.html#episode-152" class="text-purple-500 font-semibold hover:text-purple-600 transition-colors inline-flex items-center">
+                        Listen Now <i class="fas fa-play ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-full h-48 bg-gradient-to-br from-teal-400 to-teal-600 rounded-xl mb-6 flex items-center justify-center text-white">
+                        <i class="fas fa-heart text-4xl"></i>
+                    </div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-teal-100 text-teal-600 px-3 py-1 rounded-full text-sm font-semibold">Community</span>
+                        <span class="text-gray-500 text-sm">Episode 86</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Healing from Generational Trauma</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Understanding how trauma passes through generations and breaking cycles through awareness and culturally competent healing.</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fas fa-clock mr-1"></i>58 min</span>
+                        <span><i class="fas fa-calendar mr-1"></i>5 days ago</span>
+                    </div>
+                    <a href="podcast-community.html#episode-86" class="text-teal-500 font-semibold hover:text-teal-600 transition-colors inline-flex items-center">
+                        Listen Now <i class="fas fa-play ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-full h-48 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl mb-6 flex items-center justify-center text-white">
+                        <i class="fas fa-lightbulb text-4xl"></i>
+                    </div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-semibold">Wellness</span>
+                        <span class="text-gray-500 text-sm">Episode 46</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mindfulness Practices for Busy Lives</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Dr. Angela Thompson shares practical mindfulness techniques designed specifically for the fast-paced lives of our community members.</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fas fa-clock mr-1"></i>28 min</span>
+                        <span><i class="fas fa-calendar mr-1"></i>1 week ago</span>
+                    </div>
+                    <a href="podcast-wellness.html#episode-46" class="text-orange-500 font-semibold hover:text-orange-600 transition-colors inline-flex items-center">
+                        Listen Now <i class="fas fa-play ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Stats -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-100 p-12 rounded-2xl text-center">
+                <h3 class="text-3xl font-bold text-gray-900 mb-8">Our Podcast Impact</h3>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <div class="text-4xl font-bold text-purple-500 mb-2">280+</div>
+                        <p class="text-gray-600 font-semibold">Total Episodes</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-teal-500 mb-2">50K+</div>
+                        <p class="text-gray-600 font-semibold">Monthly Downloads</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-orange-500 mb-2">85</div>
+                        <p class="text-gray-600 font-semibold">Guest Experts</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-500 mb-2">4.8</div>
+                        <p class="text-gray-600 font-semibold">Average Rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe CTA -->
+    <section class="py-20 bg-purple-500 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Never Miss an Episode</h2>
+            <p class="text-xl text-purple-100 mb-10 leading-relaxed">Subscribe to our podcasts and join thousands in our community who are prioritizing their mental wellness.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#apple-podcasts" class="bg-white hover:bg-gray-100 text-purple-500 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center">
+                    <i class="fab fa-apple mr-3"></i>Apple Podcasts
+                </a>
+                <a href="#spotify" class="bg-white hover:bg-gray-100 text-purple-500 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center">
+                    <i class="fab fa-spotify mr-3"></i>Spotify
+                </a>
+                <a href="#newsletter" class="border-2 border-white hover:bg-white hover:text-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center">
+                    <i class="fas fa-bell mr-3"></i>Get Notifications
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Getting My Cheese Back On My Cracker Foundation</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Improving mental health and wellness within Black and Brown communities.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition-colors">Resources</a></li>
+                        <li><a href="media.html" class="text-gray-400 hover:text-white transition-colors">Media</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#volunteer" class="text-gray-400 hover:text-white transition-colors">Volunteer</a></li>
+                        <li><a href="#donate" class="text-gray-400 hover:text-white transition-colors">Donate</a></li>
+                        <li><a href="#partner" class="text-gray-400 hover:text-white transition-colors">Partner With Us</a></li>
+                        <li><a href="#newsletter" class="text-gray-400 hover:text-white transition-colors">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Stay Connected</h4>
+                    <form class="newsletter-form space-y-3">
+                        <input type="email" placeholder="Enter your email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Getting My Cheese Back On My Cracker Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
