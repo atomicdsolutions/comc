@@ -126,11 +126,18 @@
             </div>
             
             <article class="bg-gradient-to-br from-blue-50 to-indigo-50 p-10 rounded-2xl">
-                <div class="flex items-center gap-2 mb-6">
-                    <span class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">Featured Article</span>
-                    <span class="text-gray-500 text-sm">2 days ago</span>
+                <div class="grid lg:grid-cols-3 gap-8 items-center mb-8">
+                    <div class="lg:col-span-2">
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">Featured Article</span>
+                            <span class="text-gray-500 text-sm">2 days ago</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Mental Health Stigma in Professional Settings</h3>
+                    </div>
+                    <div class="lg:col-span-1">
+                        <img src="images/mh-management-2.jpg" alt="Professional setting mental health discussion" class="w-full h-48 object-cover rounded-xl shadow-lg">
+                    </div>
                 </div>
-                <h3 class="text-3xl font-bold text-gray-900 mb-4">Mental Health Stigma in Professional Settings</h3>
                 <div class="flex items-center gap-6 text-sm text-gray-600 mb-6">
                     <span><i class="fas fa-user mr-2"></i>Dr. Angela Davis, LCSW</span>
                     <span><i class="fas fa-clock mr-2"></i>8 min read</span>
@@ -149,48 +156,57 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-3 gap-8">
                 <!-- Article 1 -->
-                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">Wellness</span>
-                        <span class="text-gray-500 text-sm">1 week ago</span>
+                <article class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                    <img src="images/mh-management-1.jpg" alt="Community resilience" class="w-full h-48 object-cover">
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">Wellness</span>
+                            <span class="text-gray-500 text-sm">1 week ago</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Building Cultural Resilience Through Community</h3>
+                        <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                            <span><i class="fas fa-user mr-1"></i>Maria Rodriguez, PhD</span>
+                            <span><i class="fas fa-clock mr-1"></i>6 min read</span>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">How cultural identity and community connections serve as protective factors for mental health in marginalized communities...</p>
+                        <button class="text-green-500 hover:text-green-600 font-semibold transition-colors">Read More →</button>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Building Cultural Resilience Through Community</h3>
-                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
-                        <span><i class="fas fa-user mr-1"></i>Maria Rodriguez, PhD</span>
-                        <span><i class="fas fa-clock mr-1"></i>6 min read</span>
-                    </div>
-                    <p class="text-gray-600 mb-6 leading-relaxed">How cultural identity and community connections serve as protective factors for mental health in marginalized communities...</p>
-                    <button class="text-green-500 hover:text-green-600 font-semibold transition-colors">Read More →</button>
                 </article>
 
                 <!-- Article 2 -->
-                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">Research</span>
-                        <span class="text-gray-500 text-sm">2 weeks ago</span>
+                <article class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                    <img src="images/AdobeStock_335917040-scaled.jpeg" alt="Historical trauma impact" class="w-full h-48 object-cover">
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">Research</span>
+                            <span class="text-gray-500 text-sm">2 weeks ago</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">The Impact of Historical Trauma on Mental Health</h3>
+                        <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                            <span><i class="fas fa-user mr-1"></i>Dr. James Washington</span>
+                            <span><i class="fas fa-clock mr-1"></i>12 min read</span>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Understanding how generational trauma affects current mental health outcomes and pathways to healing...</p>
+                        <button class="text-purple-500 hover:text-purple-600 font-semibold transition-colors">Read More →</button>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Impact of Historical Trauma on Mental Health</h3>
-                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
-                        <span><i class="fas fa-user mr-1"></i>Dr. James Washington</span>
-                        <span><i class="fas fa-clock mr-1"></i>12 min read</span>
-                    </div>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Understanding how generational trauma affects current mental health outcomes and pathways to healing...</p>
-                    <button class="text-purple-500 hover:text-purple-600 font-semibold transition-colors">Read More →</button>
                 </article>
 
                 <!-- Article 3 -->
-                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="flex items-center gap-2 mb-4">
+                <article class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                    <img src="images/mh-management-1.jpg" alt="Mental health therapy session" class="w-full h-48 object-cover">
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 mb-4">
                         <span class="bg-teal-100 text-teal-600 px-3 py-1 rounded-full text-sm font-semibold">Self-Care</span>
                         <span class="text-gray-500 text-sm">3 weeks ago</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Daily Practices for Mental Wellness</h3>
+                        <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                            <span><i class="fas fa-user mr-1"></i>Sarah Johnson, LMFT</span>
+                            <span><i class="fas fa-clock mr-1"></i>5 min read</span>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Simple, culturally relevant self-care practices that can be integrated into busy daily routines...</p>
+                        <button class="text-teal-500 hover:text-teal-600 font-semibold transition-colors">Read More →</button>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Daily Practices for Mental Wellness</h3>
-                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
-                        <span><i class="fas fa-user mr-1"></i>Sarah Johnson, LMFT</span>
-                        <span><i class="fas fa-clock mr-1"></i>5 min read</span>
-                    </div>
-                    <p class="text-gray-600 mb-6 leading-relaxed">Simple, culturally relevant self-care practices that can be integrated into busy daily routines...</p>
-                    <button class="text-teal-500 hover:text-teal-600 font-semibold transition-colors">Read More →</button>
                 </article>
 
                 <!-- Article 4 -->

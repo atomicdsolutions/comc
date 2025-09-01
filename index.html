@@ -13,13 +13,13 @@
     <meta property="og:description" content="Breaking mental health stigma through community programs, diverse therapy resources, and culturally competent mental health support for Black and Brown communities.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://atomicdsolutions.github.io/comc/">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:image" content="https://atomicdsolutions.github.io/comc/images/AdobeStock_392811513.jpeg">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Culturally Competent Mental Health for Black & Brown Communities">
     <meta name="twitter:description" content="Breaking mental health stigma through community programs and diverse therapy resources.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:image" content="https://atomicdsolutions.github.io/comc/images/AdobeStock_392811513.jpeg">
     
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -97,11 +97,14 @@
         
         /* Smooth transitions for carousels */
         .carousel-slide {
-            display: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
         }
         
         .carousel-slide.active {
-            display: block;
+            opacity: 1;
+            visibility: visible;
         }
         
         /* Partners carousel specific styles */
@@ -201,26 +204,26 @@
                             </div>
                         </div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2088&q=80" alt="Black and Brown community members in discussion" class="absolute inset-0 w-full h-full object-cover" loading="eager">
+                    <img src="images/Banner-GMCBOMC-Fit-Challenge-Facebook-Cover-1_11_layer.jpeg" alt="GMCBOMC Foundation fitness challenge banner" class="absolute inset-0 w-full h-full object-cover" loading="eager">
                 </div>
             </div>
 
-            <!-- Slide 2: Action-Oriented -->
+            <!-- Slide 2: Podcast Programs -->
             <div class="carousel-slide absolute inset-0" data-slide="2">
                 <div class="relative h-full">
                     <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
                     <div class="absolute inset-0 z-20 flex items-center justify-center">
                         <div class="text-center text-white max-w-4xl px-4">
-                            <h1 class="text-5xl md:text-6xl font-bold mb-6 font-serif">Why Mental Health Matters in Our Communities</h1>
-                            <p class="text-xl md:text-2xl mb-4 font-medium">Breaking Down Barriers That Keep Us From Healing</p>
-                            <p class="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">Black and Brown communities face unique challenges - cultural stigma, lack of diverse therapists, and barriers to accessing culturally competent mental health care that truly understands our experiences.</p>
+                            <h1 class="text-5xl md:text-6xl font-bold mb-6 font-serif">Our <span class="text-orange-500">Podcasts</span></h1>
+                            <p class="text-xl md:text-2xl mb-4 font-medium">Three shows breaking mental health stigma through conversation</p>
+                            <p class="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">GMCBOMC Foundation, Community Conversations, and Mental Wellness Spotlight - authentic dialogue about mental health in Black and Brown communities.</p>
                             <div class="flex flex-wrap justify-center gap-4">
-                                <a href="#impact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">See the Need</a>
-                                <a href="#directory" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Find Help Now</a>
+                                <a href="podcasts.html" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Listen Now</a>
+                                <a href="media.html" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">All Media</a>
                             </div>
                         </div>
                     </div>
-                    <img src="images/Banner-GMCBOMC-Fit-Challenge-Facebook-Cover-1_11_layer.jpeg&auto=format&fit=crop&w=2073&q=80" alt="Diverse community members participating in wellness activities" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <img src="images/AdobeStock_392811513.jpeg" alt="Community conversations and podcast discussions" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
                 </div>
             </div>
 
@@ -230,16 +233,55 @@
                     <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
                     <div class="absolute inset-0 z-20 flex items-center justify-center">
                         <div class="text-center text-white max-w-4xl px-4">
-                            <h1 class="text-5xl md:text-6xl font-bold mb-6 font-serif">Growing Together, Going Far Together</h1>
-                            <p class="text-xl md:text-2xl mb-4 font-medium">Real Impact Through Community Connection</p>
-                            <p class="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">From 2 co-founders to 500+ families connected to care. Through vulnerability, community, and culturally competent resources - we're creating lasting change.</p>
+                            <h1 class="text-5xl md:text-6xl font-bold mb-6 font-serif"><span class="text-orange-500">Walktober</span> & Wellness</h1>
+                            <p class="text-xl md:text-2xl mb-4 font-medium">Miles for the Mind & Community Fitness Programs</p>
+                            <p class="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">Join our annual Walktober challenge and 5K events designed for caregivers and community members to prioritize mental wellness through movement and connection.</p>
                             <div class="flex flex-wrap justify-center gap-4">
-                                <a href="#programs" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Join Our Programs</a>
-                                <a href="#donate" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Support the Mission</a>
+                                <a href="programs.html#walktober" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Join Walktober</a>
+                                <a href="programs.html" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">All Programs</a>
                             </div>
                         </div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Black and Brown community members walking together for mental health awareness" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <img src="images/4909320.jpg" alt="Black woman in meditative wellness pose for Walktober programs" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Slide 4: Empowerment -->
+                <div class="carousel-slide absolute inset-0" data-slide="4">
+                    <div class="relative h-full">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+                        <div class="absolute inset-0 z-20 flex items-center justify-center">
+                            <div class="text-center text-white max-w-4xl px-4">
+                                <h1 class="text-5xl md:text-6xl font-bold mb-6 font-serif"><span class="text-orange-500">Cooking</span> for Calm</h1>
+                                <p class="text-xl md:text-2xl mb-4 font-medium">Therapeutic cooking sessions building community connections</p>
+                                <p class="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">Experience healing through food and conversation. Our live cooking sessions combine traditional comfort foods with mental health discussions in a supportive community setting.</p>
+                                <div class="flex flex-wrap justify-center gap-4">
+                                    <a href="programs.html#cooking-for-calm" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Join a Session</a>
+                                    <a href="live-stream.html" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Watch Live</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/AdobeStock_493819440-scaled.jpeg" alt="Cooking for Calm therapeutic session" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!-- Slide 5: Removing the Stigma Forums -->
+                <div class="carousel-slide absolute inset-0" data-slide="5">
+                    <div class="relative h-full">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+                        <div class="absolute inset-0 z-20 flex items-center justify-center">
+                            <div class="text-center text-white max-w-4xl px-4">
+                                <h1 class="text-5xl md:text-6xl font-bold mb-6 font-serif">Removing the <span class="text-orange-500">Stigma</span></h1>
+                                <p class="text-xl md:text-2xl mb-4 font-medium">In-person forums with mental health professionals</p>
+                                <p class="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">Safe spaces for open conversations about mental health challenges, featuring diverse professionals who understand our cultural experiences and community needs.</p>
+                                <div class="flex flex-wrap justify-center gap-4">
+                                    <a href="programs.html#removing-stigma" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Join Forum</a>
+                                    <a href="resources.html" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Find Resources</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/7113344.jpg" alt="Black woman in peaceful meditation representing stigma removal and mental wellness" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
                 </div>
             </div>
 
@@ -258,6 +300,8 @@
                 <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all active:bg-orange-500" data-slide="1" aria-label="Go to slide 1"></button>
                 <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all" data-slide="2" aria-label="Go to slide 2"></button>
                 <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all" data-slide="3" aria-label="Go to slide 3"></button>
+                <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all" data-slide="4" aria-label="Go to slide 4"></button>
+                <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all" data-slide="5" aria-label="Go to slide 5"></button>
             </div>
         </div>
     </section>
