@@ -4,10 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
     
+    console.log('Hamburger found:', hamburger);
+    console.log('Mobile menu found:', mobileMenu);
+    
     if (hamburger && mobileMenu) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Hamburger clicked');
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            document.body.classList.toggle('overflow-hidden');
         });
         
         // Close mobile menu when clicking on nav links
@@ -15,8 +25,20 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 mobileMenu.classList.remove('active');
+                document.body.classList.remove('overflow-hidden');
             });
         });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+    } else {
+        console.error('Mobile navigation elements not found');
     }
     
     // Smooth Scrolling for Navigation Links

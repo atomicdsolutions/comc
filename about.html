@@ -55,8 +55,15 @@
             transform: translateY(-6px) rotate(-45deg);
         }
         
-        .nav-menu.active {
-            transform: translateY(0);
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
             opacity: 1;
         }
     </style>
@@ -77,14 +84,14 @@
                     <li><a href="#contact" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Contact</a></li>
                     <li><a href="#donate" class="nav-link bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">Donate</a></li>
                 </ul>
-                <div class="hamburger md:hidden flex flex-col justify-center items-center w-8 h-8 cursor-pointer">
+                <button class="hamburger md:hidden flex flex-col justify-center items-center w-16 h-16 cursor-pointer p-3 -mr-3 bg-transparent border-none outline-none focus:outline-none active:scale-95 transition-transform" type="button" aria-label="Toggle mobile menu">
                     <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
                     <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
                     <span class="bar block w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
-                </div>
+                </button>
             </div>
             <!-- Mobile Menu -->
-            <ul class="nav-menu mobile-menu md:hidden bg-gray-900 bg-opacity-95 absolute top-full left-0 right-0 px-4 py-6 space-y-4 transform -translate-y-full opacity-0 transition-all duration-300">
+            <ul class="nav-menu mobile-menu md:hidden bg-gray-900 bg-opacity-95 absolute top-full left-0 right-0 px-4 py-6 space-y-4">
                 <li><a href="index.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Home</a></li>
                 <li><a href="about.html" class="nav-link block text-orange-500 font-semibold py-2">About</a></li>
                 <li><a href="programs.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Programs</a></li>
