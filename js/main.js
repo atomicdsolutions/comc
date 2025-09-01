@@ -292,11 +292,18 @@ document.addEventListener('DOMContentLoaded', function() {
             heroContent.classList.add('fade-in-up');
         }
         
-        // Add staggered animation to various cards
-        const animateCards = document.querySelectorAll('.program-card, .podcast-card, .testimonial-card');
+        // Add staggered animation to various cards (excluding program cards to avoid disappearing)
+        const animateCards = document.querySelectorAll('.podcast-card, .testimonial-card');
         animateCards.forEach((card, index) => {
             card.style.animationDelay = `${index * 0.1}s`;
             card.classList.add('animate-on-scroll');
+        });
+        
+        // Add lighter animation to program cards to avoid disappearing
+        const programCards = document.querySelectorAll('.program-card');
+        programCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+            card.classList.add('slide-in-left');
         });
     }
     
