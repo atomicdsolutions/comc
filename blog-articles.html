@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | GMCBOMC Foundation Blog</title>
+    <meta name="description" content="Read in-depth articles on mental health, wellness, and community support from GMCBOMC Foundation experts and contributors.">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'orange': {
+                            500: '#FF9500'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS for navigation -->
+    <style>
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+        
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="nav-logo">
+                    <h2 class="text-2xl font-bold text-gray-900">GMCBOMC Foundation</h2>
+                </div>
+                <ul class="nav-menu hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Home</a></li>
+                    <li><a href="about.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">About</a></li>
+                    <li><a href="programs.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Programs</a></li>
+                    <li><a href="resources.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Resources</a></li>
+                    <li><a href="media.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Media</a></li>
+                    <li><a href="blog.html" class="nav-link text-orange-500 hover:text-orange-600 font-medium transition-colors">Blog</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Contact</a></li>
+                    <li><a href="#donate" class="nav-link bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">Donate</a></li>
+                </ul>
+                <button class="hamburger md:hidden flex flex-col justify-center items-center w-16 h-16 cursor-pointer p-3 -mr-3 bg-transparent border-none outline-none focus:outline-none active:scale-95 transition-transform" type="button" aria-label="Toggle mobile menu">
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <ul class="nav-menu mobile-menu md:hidden bg-gray-900 bg-opacity-95 absolute top-full left-0 right-0 px-4 py-6 space-y-4">
+                <li><a href="index.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Home</a></li>
+                <li><a href="about.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">About</a></li>
+                <li><a href="programs.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Programs</a></li>
+                <li><a href="resources.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Resources</a></li>
+                <li><a href="media.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Media</a></li>
+                <li><a href="blog.html" class="nav-link block text-orange-500 font-semibold py-2">Blog</a></li>
+                <li><a href="#contact" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Contact</a></li>
+                <li><a href="#donate" class="nav-link block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-6">
+                <a href="blog.html" class="text-blue-500 hover:text-blue-600 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Blog
+                </a>
+            </div>
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6 font-serif">Articles</h1>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">In-depth articles on mental health, wellness, and community support from our experts and contributors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Article</h2>
+                <p class="text-xl text-gray-600">Our most impactful piece this month</p>
+            </div>
+            
+            <article class="bg-gradient-to-br from-blue-50 to-indigo-50 p-10 rounded-2xl">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">Featured Article</span>
+                    <span class="text-gray-500 text-sm">2 days ago</span>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">Mental Health Stigma in Professional Settings</h3>
+                <div class="flex items-center gap-6 text-sm text-gray-600 mb-6">
+                    <span><i class="fas fa-user mr-2"></i>Dr. Angela Davis, LCSW</span>
+                    <span><i class="fas fa-clock mr-2"></i>8 min read</span>
+                    <span><i class="fas fa-eye mr-2"></i>2.1K views</span>
+                </div>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">Exploring how workplace culture affects mental health disclosure and seeking support in professional environments. This comprehensive guide addresses the unique challenges faced by Black and Brown professionals when navigating mental health conversations at work...</p>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                    Read Full Article
+                </button>
+            </article>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">Wellness</span>
+                        <span class="text-gray-500 text-sm">1 week ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Building Cultural Resilience Through Community</h3>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="fas fa-user mr-1"></i>Maria Rodriguez, PhD</span>
+                        <span><i class="fas fa-clock mr-1"></i>6 min read</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">How cultural identity and community connections serve as protective factors for mental health in marginalized communities...</p>
+                    <button class="text-green-500 hover:text-green-600 font-semibold transition-colors">Read More →</button>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">Research</span>
+                        <span class="text-gray-500 text-sm">2 weeks ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Impact of Historical Trauma on Mental Health</h3>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="fas fa-user mr-1"></i>Dr. James Washington</span>
+                        <span><i class="fas fa-clock mr-1"></i>12 min read</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Understanding how generational trauma affects current mental health outcomes and pathways to healing...</p>
+                    <button class="text-purple-500 hover:text-purple-600 font-semibold transition-colors">Read More →</button>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-teal-100 text-teal-600 px-3 py-1 rounded-full text-sm font-semibold">Self-Care</span>
+                        <span class="text-gray-500 text-sm">3 weeks ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Daily Practices for Mental Wellness</h3>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="fas fa-user mr-1"></i>Sarah Johnson, LMFT</span>
+                        <span><i class="fas fa-clock mr-1"></i>5 min read</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Simple, culturally relevant self-care practices that can be integrated into busy daily routines...</p>
+                    <button class="text-teal-500 hover:text-teal-600 font-semibold transition-colors">Read More →</button>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Crisis Support</span>
+                        <span class="text-gray-500 text-sm">1 month ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Recognizing Signs of Mental Health Crisis</h3>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="fas fa-user mr-1"></i>Dr. Lisa Chen</span>
+                        <span><i class="fas fa-clock mr-1"></i>10 min read</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Essential guide for identifying crisis signs in yourself and loved ones, with culturally sensitive intervention strategies...</p>
+                    <button class="text-red-500 hover:text-red-600 font-semibold transition-colors">Read More →</button>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-semibold">Family</span>
+                        <span class="text-gray-500 text-sm">1 month ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Supporting Children's Mental Health</h3>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="fas fa-user mr-1"></i>Michael Thompson, PhD</span>
+                        <span><i class="fas fa-clock mr-1"></i>7 min read</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Age-appropriate strategies for discussing mental health with children and creating supportive home environments...</p>
+                    <button class="text-orange-500 hover:text-orange-600 font-semibold transition-colors">Read More →</button>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-semibold">Community</span>
+                        <span class="text-gray-500 text-sm">2 months ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Role of Faith in Mental Health Healing</h3>
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                        <span><i class="fas fa-user mr-1"></i>Rev. Patricia Williams</span>
+                        <span><i class="fas fa-clock mr-1"></i>9 min read</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Exploring the intersection of spiritual practice and mental wellness in Black and Brown communities...</p>
+                    <button class="text-indigo-500 hover:text-indigo-600 font-semibold transition-colors">Read More →</button>
+                </article>
+            </div>
+            
+            <!-- Load More -->
+            <div class="text-center mt-12">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                    Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Navigation -->
+    <section class="py-16 bg-white border-t">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Explore Other Categories</h3>
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <a href="blog-partners.html" class="bg-green-100 hover:bg-green-200 text-green-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-handshake mr-2"></i>Partners
+                </a>
+                <a href="blog-resources.html" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-book-open mr-2"></i>Resources
+                </a>
+                <a href="blog-news.html" class="bg-red-100 hover:bg-red-200 text-red-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-bullhorn mr-2"></i>News
+                </a>
+                <a href="blog-legislation.html" class="bg-teal-100 hover:bg-teal-200 text-teal-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-gavel mr-2"></i>Legislation
+                </a>
+                <a href="blog-events.html" class="bg-orange-100 hover:bg-orange-200 text-orange-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-calendar-alt mr-2"></i>Events
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Getting My Cheese Back On My Cracker Foundation</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Improving mental health and wellness within Black and Brown communities.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition-colors">Resources</a></li>
+                        <li><a href="media.html" class="text-gray-400 hover:text-white transition-colors">Media</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Blog Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog-articles.html" class="text-gray-400 hover:text-white transition-colors">Articles</a></li>
+                        <li><a href="blog-partners.html" class="text-gray-400 hover:text-white transition-colors">Partner Spotlight</a></li>
+                        <li><a href="blog-resources.html" class="text-gray-400 hover:text-white transition-colors">New Resources</a></li>
+                        <li><a href="blog-news.html" class="text-gray-400 hover:text-white transition-colors">News</a></li>
+                        <li><a href="blog-legislation.html" class="text-gray-400 hover:text-white transition-colors">Legislation</a></li>
+                        <li><a href="blog-events.html" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Stay Connected</h4>
+                    <form class="newsletter-form space-y-3">
+                        <input type="email" placeholder="Enter your email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Getting My Cheese Back On My Cracker Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

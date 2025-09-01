@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | GMCBOMC Foundation Blog</title>
+    <meta name="description" content="Stay updated with GMCBOMC Foundation news, program launches, community impact stories, and mental health advocacy updates.">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'orange': {
+                            500: '#FF9500'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS for navigation -->
+    <style>
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+        
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="nav-logo">
+                    <h2 class="text-2xl font-bold text-gray-900">GMCBOMC Foundation</h2>
+                </div>
+                <ul class="nav-menu hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Home</a></li>
+                    <li><a href="about.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">About</a></li>
+                    <li><a href="programs.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Programs</a></li>
+                    <li><a href="resources.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Resources</a></li>
+                    <li><a href="media.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Media</a></li>
+                    <li><a href="blog.html" class="nav-link text-orange-500 hover:text-orange-600 font-medium transition-colors">Blog</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Contact</a></li>
+                    <li><a href="#donate" class="nav-link bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">Donate</a></li>
+                </ul>
+                <button class="hamburger md:hidden flex flex-col justify-center items-center w-16 h-16 cursor-pointer p-3 -mr-3 bg-transparent border-none outline-none focus:outline-none active:scale-95 transition-transform" type="button" aria-label="Toggle mobile menu">
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <ul class="nav-menu mobile-menu md:hidden bg-gray-900 bg-opacity-95 absolute top-full left-0 right-0 px-4 py-6 space-y-4">
+                <li><a href="index.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Home</a></li>
+                <li><a href="about.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">About</a></li>
+                <li><a href="programs.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Programs</a></li>
+                <li><a href="resources.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Resources</a></li>
+                <li><a href="media.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Media</a></li>
+                <li><a href="blog.html" class="nav-link block text-orange-500 font-semibold py-2">Blog</a></li>
+                <li><a href="#contact" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Contact</a></li>
+                <li><a href="#donate" class="nav-link block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-red-50 to-pink-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-6">
+                <a href="blog.html" class="text-red-500 hover:text-red-600 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Blog
+                </a>
+            </div>
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6 font-serif">News</h1>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">Foundation updates, program launches, and community impact stories from GMCBOMC Foundation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breaking News -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-red-500 to-red-600 text-white p-8 rounded-2xl mb-12">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="bg-white text-red-500 px-4 py-2 rounded-full text-sm font-bold animate-pulse">BREAKING</span>
+                    <span class="text-red-100 text-sm">1 day ago</span>
+                </div>
+                <h2 class="text-3xl font-bold mb-4">New Crisis Text Line Launches Today</h2>
+                <p class="text-xl text-red-100 mb-6 leading-relaxed">GMCBOMC Foundation launches dedicated 24/7 crisis support text line with culturally competent counselors available for immediate mental health assistance.</p>
+                <div class="flex flex-wrap gap-6">
+                    <button class="bg-white hover:bg-gray-100 text-red-500 px-6 py-3 rounded-lg font-semibold transition-colors">
+                        <i class="fas fa-phone mr-2"></i>Text: 555-HELP
+                    </button>
+                    <button class="border-2 border-white hover:bg-white hover:text-red-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent News -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Recent Updates</h2>
+                <p class="text-xl text-gray-600">Latest news from our foundation</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- News 1 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">Program Launch</span>
+                        <span class="text-gray-500 text-sm">3 days ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mental Health First Aid Certification Program Expands</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Our Mental Health First Aid certification program now serves 15 communities with over 200 newly trained community advocates...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fas fa-graduation-cap mr-1"></i>200 Certified</span>
+                        <span><i class="fas fa-map-marker-alt mr-1"></i>15 Communities</span>
+                    </div>
+                    <button class="text-green-500 hover:text-green-600 font-semibold transition-colors">Read More →</button>
+                </article>
+
+                <!-- News 2 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">Achievement</span>
+                        <span class="text-gray-500 text-sm">1 week ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Foundation Receives $500K Mental Health Grant</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">National Mental Health Alliance awards significant grant to expand culturally competent therapy services across underserved neighborhoods...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fas fa-dollar-sign mr-1"></i>$500,000</span>
+                        <span><i class="fas fa-calendar mr-1"></i>3 Year Program</span>
+                    </div>
+                    <button class="text-blue-500 hover:text-blue-600 font-semibold transition-colors">Read More →</button>
+                </article>
+
+                <!-- News 3 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">Community Impact</span>
+                        <span class="text-gray-500 text-sm">2 weeks ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">1000+ Families Served Through Cooking for Calm</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Our Cooking for Calm program reaches major milestone, providing therapeutic cooking experiences to over 1000 families...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fas fa-users mr-1"></i>1,000+ Families</span>
+                        <span><i class="fas fa-utensils mr-1"></i>50 Sessions</span>
+                    </div>
+                    <button class="text-purple-500 hover:text-purple-600 font-semibold transition-colors">Read More →</button>
+                </article>
+
+                <!-- News 4 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-teal-100 text-teal-600 px-3 py-1 rounded-full text-sm font-semibold">Announcement</span>
+                        <span class="text-gray-500 text-sm">3 weeks ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">New Teen Mental Health Support Groups Launch</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Introducing specialized support groups for teenagers, addressing unique mental health challenges faced by young people of color...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fas fa-users mr-1"></i>5 Groups</span>
+                        <span><i class="fas fa-calendar mr-1"></i>Weekly Meetings</span>
+                    </div>
+                    <button class="text-teal-500 hover:text-teal-600 font-semibold transition-colors">Read More →</button>
+                </article>
+
+                <!-- News 5 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-semibold">Recognition</span>
+                        <span class="text-gray-500 text-sm">1 month ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">GMCBOMC Named Outstanding Community Organization</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Local government recognizes foundation's innovative approach to community mental health advocacy and culturally responsive programming...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fas fa-award mr-1"></i>City Award</span>
+                        <span><i class="fas fa-certificate mr-1"></i>Excellence</span>
+                    </div>
+                    <button class="text-orange-500 hover:text-orange-600 font-semibold transition-colors">Read More →</button>
+                </article>
+
+                <!-- News 6 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-semibold">Partnership</span>
+                        <span class="text-gray-500 text-sm">1 month ago</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">New Partnership with Local Universities</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Collaborating with three major universities to provide mental health education and support services for students of color...</p>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fas fa-graduation-cap mr-1"></i>3 Universities</span>
+                        <span><i class="fas fa-users mr-1"></i>5,000+ Students</span>
+                    </div>
+                    <button class="text-indigo-500 hover:text-indigo-600 font-semibold transition-colors">Read More →</button>
+                </article>
+            </div>
+            
+            <!-- Load More -->
+            <div class="text-center mt-12">
+                <button class="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                    Load More News
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Categories -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">News Categories</h2>
+                <p class="text-xl text-gray-600">Filter news by type</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
+                <button class="bg-red-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                    All News
+                </button>
+                <button class="bg-white hover:bg-red-50 text-red-500 border border-red-500 px-6 py-3 rounded-lg font-semibold transition-colors">
+                    Program Updates
+                </button>
+                <button class="bg-white hover:bg-red-50 text-red-500 border border-red-500 px-6 py-3 rounded-lg font-semibold transition-colors">
+                    Awards & Recognition
+                </button>
+                <button class="bg-white hover:bg-red-50 text-red-500 border border-red-500 px-6 py-3 rounded-lg font-semibold transition-colors">
+                    New Partnerships
+                </button>
+                <button class="bg-white hover:bg-red-50 text-red-500 border border-red-500 px-6 py-3 rounded-lg font-semibold transition-colors">
+                    Community Impact
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-20 bg-red-500 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Stay Informed</h2>
+            <p class="text-xl text-red-100 mb-10 leading-relaxed">Get the latest foundation news, program updates, and community impact stories delivered to your inbox.</p>
+            <form class="max-w-md mx-auto flex gap-4">
+                <input type="email" placeholder="Enter your email" required class="flex-1 px-6 py-4 bg-white text-gray-900 rounded-lg border-2 border-transparent focus:border-red-300 focus:ring-4 focus:ring-red-200 transition-all">
+                <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Categories Navigation -->
+    <section class="py-16 bg-gray-50 border-t">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Explore Other Categories</h3>
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <a href="blog-articles.html" class="bg-blue-100 hover:bg-blue-200 text-blue-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-newspaper mr-2"></i>Articles
+                </a>
+                <a href="blog-partners.html" class="bg-green-100 hover:bg-green-200 text-green-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-handshake mr-2"></i>Partners
+                </a>
+                <a href="blog-resources.html" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-book-open mr-2"></i>Resources
+                </a>
+                <a href="blog-legislation.html" class="bg-teal-100 hover:bg-teal-200 text-teal-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-gavel mr-2"></i>Legislation
+                </a>
+                <a href="blog-events.html" class="bg-orange-100 hover:bg-orange-200 text-orange-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-calendar-alt mr-2"></i>Events
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Getting My Cheese Back On My Cracker Foundation</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Improving mental health and wellness within Black and Brown communities.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition-colors">Resources</a></li>
+                        <li><a href="media.html" class="text-gray-400 hover:text-white transition-colors">Media</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Blog Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog-articles.html" class="text-gray-400 hover:text-white transition-colors">Articles</a></li>
+                        <li><a href="blog-partners.html" class="text-gray-400 hover:text-white transition-colors">Partner Spotlight</a></li>
+                        <li><a href="blog-resources.html" class="text-gray-400 hover:text-white transition-colors">New Resources</a></li>
+                        <li><a href="blog-news.html" class="text-gray-400 hover:text-white transition-colors">News</a></li>
+                        <li><a href="blog-legislation.html" class="text-gray-400 hover:text-white transition-colors">Legislation</a></li>
+                        <li><a href="blog-events.html" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Stay Connected</h4>
+                    <form class="newsletter-form space-y-3">
+                        <input type="email" placeholder="Enter your email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Getting My Cheese Back On My Cracker Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

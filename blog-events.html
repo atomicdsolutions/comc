@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events | GMCBOMC Foundation Blog</title>
+    <meta name="description" content="Community events, workshops, webinars, and important dates from GMCBOMC Foundation and mental health advocacy community.">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'orange': {
+                            500: '#FF9500'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS for navigation -->
+    <style>
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+        
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="nav-logo">
+                    <h2 class="text-2xl font-bold text-gray-900">GMCBOMC Foundation</h2>
+                </div>
+                <ul class="nav-menu hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Home</a></li>
+                    <li><a href="about.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">About</a></li>
+                    <li><a href="programs.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Programs</a></li>
+                    <li><a href="resources.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Resources</a></li>
+                    <li><a href="media.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Media</a></li>
+                    <li><a href="blog.html" class="nav-link text-orange-500 hover:text-orange-600 font-medium transition-colors">Blog</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Contact</a></li>
+                    <li><a href="#donate" class="nav-link bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">Donate</a></li>
+                </ul>
+                <button class="hamburger md:hidden flex flex-col justify-center items-center w-16 h-16 cursor-pointer p-3 -mr-3 bg-transparent border-none outline-none focus:outline-none active:scale-95 transition-transform" type="button" aria-label="Toggle mobile menu">
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <ul class="nav-menu mobile-menu md:hidden bg-gray-900 bg-opacity-95 absolute top-full left-0 right-0 px-4 py-6 space-y-4">
+                <li><a href="index.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Home</a></li>
+                <li><a href="about.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">About</a></li>
+                <li><a href="programs.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Programs</a></li>
+                <li><a href="resources.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Resources</a></li>
+                <li><a href="media.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Media</a></li>
+                <li><a href="blog.html" class="nav-link block text-orange-500 font-semibold py-2">Blog</a></li>
+                <li><a href="#contact" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Contact</a></li>
+                <li><a href="#donate" class="nav-link block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-orange-50 to-red-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-6">
+                <a href="blog.html" class="text-orange-500 hover:text-orange-600 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Blog
+                </a>
+            </div>
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6 font-serif">Upcoming Events</h1>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">Community events, workshops, webinars, and important dates to support your mental health journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Event -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Next Event</h2>
+                <p class="text-xl text-gray-600">Don't miss our upcoming highlight</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-orange-50 to-red-50 p-10 rounded-2xl border border-orange-200">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold">Next Event</span>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">Free</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">Mental Health First Aid Community Training</h3>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <i class="fas fa-calendar text-orange-500"></i>
+                                <span><strong>February 8, 2025</strong> • 10:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <i class="fas fa-map-marker-alt text-orange-500"></i>
+                                <span>Community Center, 123 Main St</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-600">
+                                <i class="fas fa-users text-orange-500"></i>
+                                <span>25 spots available</span>
+                            </div>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">Learn to identify signs of mental health challenges and connect people to appropriate resources through this comprehensive certification training...</p>
+                        <div class="flex flex-wrap gap-4">
+                            <button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-ticket-alt mr-2"></i>Register Now
+                            </button>
+                            <button class="border-2 border-orange-500 hover:bg-orange-50 text-orange-500 px-8 py-3 rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-info-circle mr-2"></i>Learn More
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-orange-400 to-red-500 h-64 rounded-xl flex items-center justify-center text-white">
+                        <div class="text-center">
+                            <i class="fas fa-first-aid text-6xl mb-4"></i>
+                            <p class="text-xl font-bold">Mental Health</p>
+                            <p class="text-orange-100">First Aid Training</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">This Month's Events</h2>
+                <p class="text-xl text-gray-600">Mark your calendar</p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Event 1 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex flex-wrap items-center gap-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex flex-col items-center justify-center text-white text-center">
+                            <div class="text-sm font-semibold">FEB</div>
+                            <div class="text-xl font-bold">12</div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">Workshop</span>
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">Virtual</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Coping Strategies for Caregivers</h3>
+                            <p class="text-gray-600 mb-3">Interactive workshop focused on self-care techniques for those caring for family members with mental health challenges.</p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                                <span><i class="fas fa-clock mr-1"></i>6:00 PM - 8:00 PM</span>
+                                <span><i class="fas fa-laptop mr-1"></i>Zoom</span>
+                                <span><i class="fas fa-users mr-1"></i>50 spots</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Register
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Event 2 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex flex-wrap items-center gap-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex flex-col items-center justify-center text-white text-center">
+                            <div class="text-sm font-semibold">FEB</div>
+                            <div class="text-xl font-bold">15</div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">Support Group</span>
+                                <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-semibold">In-Person</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Teen Mental Health Support Circle</h3>
+                            <p class="text-gray-600 mb-3">Safe space for teenagers to discuss mental health challenges with peers and trained facilitators.</p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                                <span><i class="fas fa-clock mr-1"></i>4:00 PM - 5:30 PM</span>
+                                <span><i class="fas fa-map-marker-alt mr-1"></i>Youth Center</span>
+                                <span><i class="fas fa-users mr-1"></i>15 max</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Join Group
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Event 3 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex flex-wrap items-center gap-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex flex-col items-center justify-center text-white text-center">
+                            <div class="text-sm font-semibold">FEB</div>
+                            <div class="text-xl font-bold">18</div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">Cooking Session</span>
+                                <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-semibold">In-Person</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Cooking for Calm: Soul Food Edition</h3>
+                            <p class="text-gray-600 mb-3">Therapeutic cooking session exploring traditional comfort foods and their connection to cultural healing.</p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                                <span><i class="fas fa-clock mr-1"></i>2:00 PM - 5:00 PM</span>
+                                <span><i class="fas fa-utensils mr-1"></i>Kitchen Studio</span>
+                                <span><i class="fas fa-users mr-1"></i>20 spots</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Reserve Spot
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Event 4 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex flex-wrap items-center gap-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-teal-400 to-teal-600 rounded-lg flex flex-col items-center justify-center text-white text-center">
+                            <div class="text-sm font-semibold">FEB</div>
+                            <div class="text-xl font-bold">22</div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="bg-teal-100 text-teal-600 px-3 py-1 rounded-full text-sm font-semibold">Webinar</span>
+                                <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">Virtual</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Understanding Insurance Coverage for Mental Health</h3>
+                            <p class="text-gray-600 mb-3">Educational webinar on navigating insurance systems and accessing covered mental health services.</p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                                <span><i class="fas fa-clock mr-1"></i>7:00 PM - 8:30 PM</span>
+                                <span><i class="fas fa-laptop mr-1"></i>Zoom</span>
+                                <span><i class="fas fa-users mr-1"></i>100 spots</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Register
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Event 5 -->
+                <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="flex flex-wrap items-center gap-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-lg flex flex-col items-center justify-center text-white text-center">
+                            <div class="text-sm font-semibold">FEB</div>
+                            <div class="text-xl font-bold">25</div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-semibold">Community Event</span>
+                                <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-semibold">In-Person</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Mental Health Resource Fair</h3>
+                            <p class="text-gray-600 mb-3">Community fair featuring local mental health organizations, free screenings, and wellness activities.</p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                                <span><i class="fas fa-clock mr-1"></i>11:00 AM - 3:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt mr-1"></i>City Park</span>
+                                <span><i class="fas fa-heart mr-1"></i>Free Screenings</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                                Get Info
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Calendar -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Event Calendar</h2>
+                <p class="text-xl text-gray-600">Plan ahead with our monthly calendar</p>
+            </div>
+            
+            <div class="bg-gray-100 p-8 rounded-2xl">
+                <div class="grid grid-cols-7 gap-2 mb-6">
+                    <div class="text-center font-semibold text-gray-700 py-3">Sun</div>
+                    <div class="text-center font-semibold text-gray-700 py-3">Mon</div>
+                    <div class="text-center font-semibold text-gray-700 py-3">Tue</div>
+                    <div class="text-center font-semibold text-gray-700 py-3">Wed</div>
+                    <div class="text-center font-semibold text-gray-700 py-3">Thu</div>
+                    <div class="text-center font-semibold text-gray-700 py-3">Fri</div>
+                    <div class="text-center font-semibold text-gray-700 py-3">Sat</div>
+                </div>
+                <div class="grid grid-cols-7 gap-2">
+                    <!-- Calendar days -->
+                    <div class="h-20 bg-white rounded-lg p-2 text-center text-gray-400">31</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">1</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">2</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">3</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">4</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">5</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">6</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">7</div>
+                    <div class="h-20 bg-orange-100 border-2 border-orange-500 rounded-lg p-2 text-center">
+                        <div class="font-bold">8</div>
+                        <div class="text-xs text-orange-600">Training</div>
+                    </div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">9</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">10</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">11</div>
+                    <div class="h-20 bg-purple-100 border-2 border-purple-500 rounded-lg p-2 text-center">
+                        <div class="font-bold">12</div>
+                        <div class="text-xs text-purple-600">Workshop</div>
+                    </div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">13</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">14</div>
+                    <div class="h-20 bg-purple-100 border-2 border-purple-500 rounded-lg p-2 text-center">
+                        <div class="font-bold">15</div>
+                        <div class="text-xs text-purple-600">Support</div>
+                    </div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">16</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">17</div>
+                    <div class="h-20 bg-green-100 border-2 border-green-500 rounded-lg p-2 text-center">
+                        <div class="font-bold">18</div>
+                        <div class="text-xs text-green-600">Cooking</div>
+                    </div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">19</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">20</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">21</div>
+                    <div class="h-20 bg-teal-100 border-2 border-teal-500 rounded-lg p-2 text-center">
+                        <div class="font-bold">22</div>
+                        <div class="text-xs text-teal-600">Webinar</div>
+                    </div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">23</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">24</div>
+                    <div class="h-20 bg-indigo-100 border-2 border-indigo-500 rounded-lg p-2 text-center">
+                        <div class="font-bold">25</div>
+                        <div class="text-xs text-indigo-600">Fair</div>
+                    </div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">26</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">27</div>
+                    <div class="h-20 bg-white rounded-lg p-2 text-center">28</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Registration CTA -->
+    <section class="py-20 bg-orange-500 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Join Our Community Events</h2>
+            <p class="text-xl text-orange-100 mb-10 leading-relaxed">Stay connected with our community through workshops, support groups, and educational events designed to promote mental wellness.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#calendar-signup" class="bg-white hover:bg-gray-100 text-orange-500 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center">
+                    <i class="fas fa-calendar-plus mr-3"></i>Add to Calendar
+                </a>
+                <a href="#event-notifications" class="border-2 border-white hover:bg-white hover:text-orange-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center">
+                    <i class="fas fa-bell mr-3"></i>Event Alerts
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Navigation -->
+    <section class="py-16 bg-gray-50 border-t">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Explore Other Categories</h3>
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <a href="blog-articles.html" class="bg-blue-100 hover:bg-blue-200 text-blue-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-newspaper mr-2"></i>Articles
+                </a>
+                <a href="blog-partners.html" class="bg-green-100 hover:bg-green-200 text-green-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-handshake mr-2"></i>Partners
+                </a>
+                <a href="blog-resources.html" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-book-open mr-2"></i>Resources
+                </a>
+                <a href="blog-news.html" class="bg-red-100 hover:bg-red-200 text-red-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-bullhorn mr-2"></i>News
+                </a>
+                <a href="blog-legislation.html" class="bg-teal-100 hover:bg-teal-200 text-teal-700 px-6 py-3 rounded-lg font-semibold text-center transition-colors">
+                    <i class="fas fa-gavel mr-2"></i>Legislation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Getting My Cheese Back On My Cracker Foundation</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Improving mental health and wellness within Black and Brown communities.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition-colors">Resources</a></li>
+                        <li><a href="media.html" class="text-gray-400 hover:text-white transition-colors">Media</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Blog Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog-articles.html" class="text-gray-400 hover:text-white transition-colors">Articles</a></li>
+                        <li><a href="blog-partners.html" class="text-gray-400 hover:text-white transition-colors">Partner Spotlight</a></li>
+                        <li><a href="blog-resources.html" class="text-gray-400 hover:text-white transition-colors">New Resources</a></li>
+                        <li><a href="blog-news.html" class="text-gray-400 hover:text-white transition-colors">News</a></li>
+                        <li><a href="blog-legislation.html" class="text-gray-400 hover:text-white transition-colors">Legislation</a></li>
+                        <li><a href="blog-events.html" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Stay Connected</h4>
+                    <form class="newsletter-form space-y-3">
+                        <input type="email" placeholder="Enter your email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Getting My Cheese Back On My Cracker Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
