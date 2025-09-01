@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+        
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Test Navigation -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="nav-logo">
+                    <h2 class="text-2xl font-bold text-gray-900">TEST MENU</h2>
+                </div>
+                <button class="hamburger md:hidden flex flex-col justify-center items-center w-16 h-16 cursor-pointer p-3 -mr-3 bg-transparent border-none outline-none focus:outline-none active:scale-95 transition-transform" type="button" aria-label="Toggle mobile menu">
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <ul class="nav-menu mobile-menu md:hidden bg-gray-900 bg-opacity-95 absolute top-full left-0 right-0 px-4 py-6 space-y-4">
+                <li><a href="#" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Test Link 1</a></li>
+                <li><a href="#" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Test Link 2</a></li>
+                <li><a href="#" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Test Link 3</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Test Content -->
+    <div class="pt-32 p-8">
+        <h1 class="text-4xl font-bold">Mobile Menu Test Page</h1>
+        <p class="text-lg mt-4">This page tests the mobile hamburger menu functionality.</p>
+        <p class="mt-4">Try clicking the hamburger menu button (visible on mobile/small screens).</p>
+        
+        <div class="mt-8 bg-yellow-100 p-4 rounded-lg">
+            <h3 class="font-bold">Debug Info:</h3>
+            <div id="debug-info"></div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        console.log('Hamburger found:', hamburger);
+        console.log('Mobile menu found:', mobileMenu);
+        
+        // Add debug info to page
+        const debugInfo = document.getElementById('debug-info');
+        debugInfo.innerHTML = `
+            <p>Hamburger element: ${hamburger ? 'Found' : 'Not found'}</p>
+            <p>Mobile menu element: ${mobileMenu ? 'Found' : 'Not found'}</p>
+            <p>Screen width: ${window.innerWidth}px</p>
+        `;
+        
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                console.log('Hamburger clicked');
+                debugInfo.innerHTML += `<p style="color: green;">Click registered at ${new Date().toLocaleTimeString()}</p>`;
+                
+                hamburger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                
+                // Prevent body scroll when menu is open
+                document.body.classList.toggle('overflow-hidden');
+                
+                debugInfo.innerHTML += `<p>Menu active: ${mobileMenu.classList.contains('active')}</p>`;
+            });
+        } else {
+            console.error('Mobile navigation elements not found');
+            debugInfo.innerHTML += `<p style="color: red;">Error: Navigation elements not found</p>`;
+        }
+    });
+    </script>
+</body>
+</html>
