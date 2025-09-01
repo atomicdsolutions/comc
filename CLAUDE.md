@@ -77,5 +77,47 @@ The HTML structure is complete with semantic markup for:
 - Font Awesome 6.4.0 for icons
 - Uses Unsplash images as placeholders in HTML
 
+## SEO Keywords for Mental Health in Black & Brown Communities
+
+### Primary High-Value Keywords
+- "culturally competent mental health providers"
+- "Black mental health stigma reduction" 
+- "therapy for Black and Brown communities"
+- "Latino mental health resources"
+- "African American mental health support"
+- "Hispanic mental health services"
+- "BIPOC mental health advocacy"
+- "Black therapist directory"
+- "culturally sensitive therapy"
+- "mental health for people of color"
+
+### Location-Based Keywords
+- "[City] Black mental health providers"
+- "culturally competent therapists near me"
+- "diverse mental health professionals [location]"
+- "Black and Brown therapy services [city]"
+
+### Specific Community Needs Keywords
+- "Black men's mental health support"
+- "Black women therapy resources"
+- "Latino family mental health"
+- "intergenerational trauma therapy"
+- "racial trauma counseling"
+- "community mental health programs"
+- "diverse therapists"
+- "mental health support for people of color"
+- "culturally competent therapy"
+- "breaking mental health stigma"
+
+### Long-tail SEO Phrases
+- "culturally competent mental health care for Black communities"
+- "diverse mental health provider network"
+- "Black and Brown community mental health advocacy"
+- "stigma reduction in minority mental health"
+- "therapy resources for communities of color"
+
+### Meta Keywords Currently Used
+Black mental health, Brown community mental health, culturally competent therapy, BIPOC mental health advocacy, African American mental health support, Latino mental health resources, diverse therapists, Black therapist directory, mental health stigma reduction, racial trauma counseling, culturally sensitive therapy, therapy for people of color
+
 ## Reference Website
 Current foundation website: https://cheeseonmycracker.com/
