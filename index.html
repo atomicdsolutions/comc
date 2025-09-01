@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting My Cheese Back On My Cracker Foundation | Mental Health for Black & Brown Communities</title>
+    <meta name="description" content="A non-profit dedicated to improving mental health and wellness within Black and Brown communities through advocacy, resources, and community programs.">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>GMCBOMC Foundation</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#programs" class="nav-link">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resources" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#donate" class="nav-link donate-btn">Donate</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel Section -->
+    <section id="home" class="hero-section">
+        <div class="carousel-container">
+            <!-- Slide 1: Mission-Focused -->
+            <div class="carousel-slide active" data-slide="1">
+                <div class="slide-content">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-text">
+                        <h1 class="hero-title">It Takes a Village to Get Your Cheese Back</h1>
+                        <p class="hero-subtitle">Two co-founders searching for community and better mental health care</p>
+                        <p class="hero-description">Started from our own struggles to find culturally competent therapists. Now we lead with vulnerability, sharing our mental health journeys so others can see themselves in our stories.</p>
+                        <div class="hero-buttons">
+                            <a href="#story" class="btn btn-primary">Our Story</a>
+                            <a href="#programs" class="btn btn-secondary">See Programs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-background">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2088&q=80" alt="Black and Brown community members in discussion" loading="eager">
+                </div>
+            </div>
+
+            <!-- Slide 2: Action-Oriented -->
+            <div class="carousel-slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-text">
+                        <h1 class="hero-title">Why Mental Health Matters in Our Communities</h1>
+                        <p class="hero-subtitle">Breaking Down Barriers That Keep Us From Healing</p>
+                        <p class="hero-description">Black and Brown communities face unique challenges - cultural stigma, lack of representation, and barriers to accessing care that truly understands our experiences.</p>
+                        <div class="hero-buttons">
+                            <a href="#impact" class="btn btn-primary">See the Need</a>
+                            <a href="#directory" class="btn btn-secondary">Find Help Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-background">
+                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" alt="Diverse community members participating in wellness activities" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Slide 3: Impact/Story -->
+            <div class="carousel-slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-text">
+                        <h1 class="hero-title">Growing Together, Going Far Together</h1>
+                        <p class="hero-subtitle">Real Impact Through Community Connection</p>
+                        <p class="hero-description">From 2 co-founders to 500+ families connected to care. Through vulnerability, community, and culturally competent resources - we're creating lasting change.</p>
+                        <div class="hero-buttons">
+                            <a href="#programs" class="btn btn-primary">Join Our Programs</a>
+                            <a href="#donate" class="btn btn-secondary">Support the Mission</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-background">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Black and Brown community members walking together for mental health awareness" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Carousel Navigation -->
+            <div class="carousel-nav">
+                <button class="carousel-btn prev-btn" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next-btn" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Carousel Dots -->
+            <div class="carousel-dots">
+                <button class="dot active" data-slide="1" aria-label="Go to slide 1"></button>
+                <button class="dot" data-slide="2" aria-label="Go to slide 2"></button>
+                <button class="dot" data-slide="3" aria-label="Go to slide 3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section class="the-problem">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Challenge We Face</h2>
+                <p>Mental health stigma in Black and Brown communities creates real barriers to healing</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-stat">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">of Black adults avoid mental health treatment due to stigma</div>
+                </div>
+                <div class="problem-stat">
+                    <div class="stat-number">3x</div>
+                    <div class="stat-label">less likely to receive culturally competent care</div>
+                </div>
+                <div class="problem-stat">
+                    <div class="stat-number">75%</div>
+                    <div class="stat-label">report feeling misunderstood by providers</div>
+                </div>
+            </div>
+            <div class="problem-story">
+                <h3>Our founders experienced this firsthand</h3>
+                <p>Two people searching for community and struggling to find therapists who truly understood their cultural background. That search became a podcast, and that podcast became a movement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Programs Section -->
+    <section class="our-programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We're Creating Change</h2>
+                <p>Leading with vulnerability, building with community</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card featured">
+                    <div class="program-badge">Signature Program</div>
+                    <div class="program-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Cooking for Calm</h3>
+                    <p>Live cooking sessions with amazing chefs who share their mental health journeys while teaching healthy cooking. Learn why nutrition and mental wellness go hand in hand.</p>
+                    <div class="program-features">
+                        <span><i class="fas fa-video"></i> Live Chef Sessions</span>
+                        <span><i class="fas fa-heart"></i> Mental Health Stories</span>
+                        <span><i class="fas fa-apple-alt"></i> Healthy Recipe Focus</span>
+                    </div>
+                    <div class="program-buttons">
+                        <a href="#cooking" class="btn btn-primary">Join Next Session</a>
+                        <a href="#recipes" class="btn btn-secondary">Browse Recipes</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3>Walktober & 5K Events</h3>
+                    <p>Annual step challenge and walking events that encourage movement for mental wellness. Community building through shared physical activity.</p>
+                    <div class="program-buttons">
+                        <a href="#walktober" class="btn btn-primary">Join Walktober</a>
+                        <a href="#5k" class="btn btn-secondary">5K Registration</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Remove the Stigma Forums</h3>
+                    <p>Traveling in-person conversations with mental health professionals who understand our cultural differences and community needs.</p>
+                    <div class="program-buttons">
+                        <a href="#forums" class="btn btn-primary">Attend Forum</a>
+                        <a href="#professionals" class="btn btn-secondary">Meet Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcasts & Communities Section -->
+    <section class="podcasts-communities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Voices, Our Stories</h2>
+                <p>Three podcasts and two communities where vulnerability leads to healing</p>
+            </div>
+            <div class="podcast-grid">
+                <div class="podcast-card flagship">
+                    <div class="podcast-badge">Original Podcast</div>
+                    <div class="podcast-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Getting My Cheese Back On My Cracker</h3>
+                    <p>Where it all started - difficult conversations that aren't being had in Black and Brown communities. Our founders share their journeys with vulnerability and authenticity.</p>
+                    <a href="#podcast1" class="btn btn-primary">Listen Now</a>
+                </div>
+                <div class="podcast-card">
+                    <div class="podcast-icon">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <h3>The State of the Black Man's Mental Health</h3>
+                    <p>Focused conversations addressing mental health challenges specifically facing Black men, with a dedicated community for support.</p>
+                    <a href="#podcast2" class="btn btn-secondary">Listen & Join Community</a>
+                </div>
+                <div class="podcast-card">
+                    <div class="podcast-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>The Wellness Collective</h3>
+                    <p>Safe space for women to share, grow, and engage with like-minded people on their wellness journey.</p>
+                    <a href="#podcast3" class="btn btn-secondary">Join Community</a>
+                </div>
+            </div>
+            <div class="community-highlight">
+                <h3>Safe Spaces for Growth</h3>
+                <p>Our gender-specific communities provide dedicated spaces where members can share experiences, find support, and grow together on their mental wellness journeys.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stories Section -->
+    <section class="impact-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Stories of Impact</h2>
+                <p>Real testimonials from our community members</p>
+            </div>
+            <div class="stories-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"The foundation's resource directory helped me find a therapist who truly understands my cultural background. For the first time, I felt heard."</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Maria S.</h4>
+                            <p>Community Member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"As a caregiver for my elderly mother, I felt invisible until I joined this community. Now I know I'm not alone."</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div class="author-info">
+                            <h4>James T.</h4>
+                            <p>Caregiver</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number">30,000+</div>
+                    <div class="stat-label">Miles Logged Last Year</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Families Connected to Resources</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Culturally Competent Providers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25</div>
+                    <div class="stat-label">Community Partners</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Directory Highlight Section -->
+    <section class="directory-highlight">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Your Perfect Match</h2>
+                <p>Businesses and providers who understand our community's unique needs</p>
+            </div>
+            <div class="directory-preview">
+                <div class="directory-hero">
+                    <div class="directory-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Provider Directory</h3>
+                    <p>We're developing a comprehensive directory of businesses capable of serving our community - helping people get their cheese back on their cracker through culturally competent care.</p>
+                    <div class="directory-features">
+                        <span><i class="fas fa-check"></i> Culturally Competent Providers</span>
+                        <span><i class="fas fa-check"></i> Community-Vetted Businesses</span>
+                        <span><i class="fas fa-check"></i> Lived Experience Focus</span>
+                    </div>
+                    <a href="#directory" class="btn btn-primary">Access Directory</a>
+                </div>
+                <div class="directory-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Verified Providers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Service Categories</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Community Reviews</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="get-involved">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Involved</h2>
+                <p>Multiple ways to support mental wellness in our communities</p>
+            </div>
+            <div class="involvement-grid">
+                <div class="involvement-card primary">
+                    <div class="involvement-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Donate</h3>
+                    <p>Support our programs and help expand mental health resources.</p>
+                    <a href="#donate" class="btn btn-primary">Donate Now</a>
+                </div>
+                <div class="involvement-card">
+                    <div class="involvement-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Volunteer</h3>
+                    <p>Join our events, help with outreach, or share your skills with the community.</p>
+                    <a href="#volunteer" class="btn btn-secondary">Get Started</a>
+                </div>
+                <div class="involvement-card">
+                    <div class="involvement-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe for event notifications, resource updates, and community news.</p>
+                    <a href="#newsletter" class="btn btn-secondary">Subscribe</a>
+                </div>
+            </div>
+            <div class="quick-actions">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <a href="#events" class="btn btn-outline">Join Events</a>
+                    <a href="#directory" class="btn btn-outline">Browse Directory</a>
+                    <a href="#social" class="btn btn-outline">Follow Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Help Section -->
+    <section class="contact-help">
+        <div class="container">
+            <div class="help-grid">
+                <div class="help-section">
+                    <h2>Need Mental Health Support?</h2>
+                    <p>If you're in crisis or need immediate support, here are resources available 24/7:</p>
+                    <div class="crisis-resources">
+                        <div class="crisis-item">
+                            <strong>National Suicide Prevention Lifeline</strong>
+                            <span>988</span>
+                        </div>
+                        <div class="crisis-item">
+                            <strong>Crisis Text Line</strong>
+                            <span>Text HOME to 741741</span>
+                        </div>
+                        <div class="crisis-item">
+                            <strong>SAMHSA National Helpline</strong>
+                            <span>1-800-662-4357</span>
+                        </div>
+                    </div>
+                    <a href="#directory" class="btn btn-primary">Find Local Support</a>
+                </div>
+                <div class="contact-section">
+                    <h3>Questions? We're Here to Help</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="How can we help you?" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@cheeseonmycracker.com</p>
+                        <p><i class="fas fa-phone"></i> Available via email</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Momentum Section -->
+    <section class="trust-momentum">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Trusted Partners</h2>
+                <p>Working together to expand mental health access</p>
+            </div>
+            <div class="partner-showcase">
+                <div class="partners-carousel">
+                    <div class="partners-track">
+                        <div class="partner-slide">
+                            <div class="partner-logo">CareSync</div>
+                            <div class="partner-logo">Community Health Alliance</div>
+                            <div class="partner-logo">Wellness Coalition</div>
+                        </div>
+                        <div class="partner-slide">
+                            <div class="partner-logo">Mental Health Georgia</div>
+                            <div class="partner-logo">Black Mental Health</div>
+                            <div class="partner-logo">NAMI Atlanta</div>
+                        </div>
+                        <div class="partner-slide">
+                            <div class="partner-logo">Georgia Crisis & Access Line</div>
+                            <div class="partner-logo">Therapy for Black Girls</div>
+                            <div class="partner-logo">National Alliance on Mental Illness</div>
+                        </div>
+                    </div>
+                    <div class="partners-nav">
+                        <button class="partners-btn prev-partners" aria-label="Previous partners">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="partners-btn next-partners" aria-label="Next partners">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="partners-dots">
+                        <button class="partner-dot active" data-slide="0" aria-label="Partners group 1"></button>
+                        <button class="partner-dot" data-slide="1" aria-label="Partners group 2"></button>
+                        <button class="partner-dot" data-slide="2" aria-label="Partners group 3"></button>
+                    </div>
+                </div>
+                <div class="community-callout">
+                    <h3>Join Our Growing Community</h3>
+                    <p>Connect with others on similar journeys, share resources, and find support.</p>
+                    <a href="#community" class="btn btn-primary">Join Community</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Getting My Cheese Back On My Cracker Foundation</h3>
+                    <p>Improving mental health and wellness within Black and Brown communities.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="#volunteer">Volunteer</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="#partner">Partner With Us</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Stay Connected</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Getting My Cheese Back On My Cracker Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
