@@ -14,197 +14,270 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/components.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'orange': {
+                            500: '#FF9500'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS for carousel functionality -->
+    <style>
+        /* Carousel styles that Tailwind doesn't handle */
+        .partners-dot.active {
+            background-color: #FF9500 !important;
+        }
+        
+        /* Smooth transitions for carousels */
+        .carousel-slide {
+            display: none;
+        }
+        
+        .carousel-slide.active {
+            display: block;
+        }
+        
+        /* Partners carousel specific styles */
+        .partners-track {
+            width: 300%; /* 3 slides */
+        }
+        
+        .partner-slide {
+            width: 33.333%;
+        }
+        
+        /* Mobile navigation styles */
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+        
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+        
+        .nav-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Dot active states */
+        .dot.active {
+            background-color: #FF9500 !important;
+        }
+    </style>
+    
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>GMCBOMC Foundation</h2>
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="nav-logo">
+                    <h2 class="text-2xl font-bold text-white">GMCBOMC Foundation</h2>
+                </div>
+                <ul class="nav-menu hidden md:flex space-x-8">
+                    <li><a href="#home" class="nav-link text-white hover:text-orange-500 font-medium transition-colors">Home</a></li>
+                    <li><a href="#about" class="nav-link text-white hover:text-orange-500 font-medium transition-colors">About</a></li>
+                    <li><a href="#programs" class="nav-link text-white hover:text-orange-500 font-medium transition-colors">Programs</a></li>
+                    <li><a href="#resources" class="nav-link text-white hover:text-orange-500 font-medium transition-colors">Resources</a></li>
+                    <li><a href="#contact" class="nav-link text-white hover:text-orange-500 font-medium transition-colors">Contact</a></li>
+                    <li><a href="#donate" class="nav-link bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">Donate</a></li>
+                </ul>
+                <div class="hamburger md:hidden flex flex-col justify-center items-center w-8 h-8 cursor-pointer">
+                    <span class="bar block w-6 h-0.5 bg-white mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-white mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                </div>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#programs" class="nav-link">Programs</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#resources" class="nav-link">Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#donate" class="nav-link donate-btn">Donate</a>
-                </li>
+            <!-- Mobile Menu -->
+            <ul class="nav-menu md:hidden bg-gray-900 bg-opacity-95 absolute top-full left-0 right-0 px-4 py-6 space-y-4 transform -translate-y-full opacity-0 transition-all duration-300">
+                <li><a href="#home" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Home</a></li>
+                <li><a href="#about" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">About</a></li>
+                <li><a href="#programs" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Programs</a></li>
+                <li><a href="#resources" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Resources</a></li>
+                <li><a href="#contact" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Contact</a></li>
+                <li><a href="#donate" class="nav-link block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors">Donate</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </nav>
 
     <!-- Hero Carousel Section -->
-    <section id="home" class="hero-section">
-        <div class="carousel-container">
+    <section id="home" class="relative h-screen bg-gray-900 overflow-hidden">
+        <div class="carousel-container relative h-full">
             <!-- Slide 1: Mission-Focused -->
-            <div class="carousel-slide active" data-slide="1">
-                <div class="slide-content">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-text">
-                        <h1 class="hero-title">It Takes a Village to Get Your Cheese Back</h1>
-                        <p class="hero-subtitle">Two co-founders searching for community and better mental health care</p>
-                        <p class="hero-description">Started from our own struggles to find culturally competent therapists. Now we lead with vulnerability, sharing our mental health journeys so others can see themselves in our stories.</p>
-                        <div class="hero-buttons">
-                            <a href="#story" class="btn btn-primary">Our Story</a>
-                            <a href="#programs" class="btn btn-secondary">See Programs</a>
+            <div class="carousel-slide active absolute inset-0" data-slide="1">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+                    <div class="absolute inset-0 z-20 flex items-center justify-center">
+                        <div class="text-center text-white max-w-4xl px-4">
+                            <h1 class="text-5xl md:text-6xl font-bold mb-6 font-serif">It Takes a Village to Get Your Cheese Back</h1>
+                            <p class="text-xl md:text-2xl mb-4 font-medium">Two co-founders searching for community and better mental health care</p>
+                            <p class="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">Started from our own struggles to find culturally competent therapists. Now we lead with vulnerability, sharing our mental health journeys so others can see themselves in our stories.</p>
+                            <div class="flex flex-wrap justify-center gap-4">
+                                <a href="#story" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Our Story</a>
+                                <a href="#programs" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">See Programs</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="slide-background">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2088&q=80" alt="Black and Brown community members in discussion" loading="eager">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2088&q=80" alt="Black and Brown community members in discussion" class="absolute inset-0 w-full h-full object-cover" loading="eager">
                 </div>
             </div>
 
             <!-- Slide 2: Action-Oriented -->
-            <div class="carousel-slide" data-slide="2">
-                <div class="slide-content">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-text">
-                        <h1 class="hero-title">Why Mental Health Matters in Our Communities</h1>
-                        <p class="hero-subtitle">Breaking Down Barriers That Keep Us From Healing</p>
-                        <p class="hero-description">Black and Brown communities face unique challenges - cultural stigma, lack of representation, and barriers to accessing care that truly understands our experiences.</p>
-                        <div class="hero-buttons">
-                            <a href="#impact" class="btn btn-primary">See the Need</a>
-                            <a href="#directory" class="btn btn-secondary">Find Help Now</a>
+            <div class="carousel-slide absolute inset-0" data-slide="2">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+                    <div class="absolute inset-0 z-20 flex items-center justify-center">
+                        <div class="text-center text-white max-w-4xl px-4">
+                            <h1 class="text-5xl md:text-6xl font-bold mb-6 font-serif">Why Mental Health Matters in Our Communities</h1>
+                            <p class="text-xl md:text-2xl mb-4 font-medium">Breaking Down Barriers That Keep Us From Healing</p>
+                            <p class="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">Black and Brown communities face unique challenges - cultural stigma, lack of representation, and barriers to accessing care that truly understands our experiences.</p>
+                            <div class="flex flex-wrap justify-center gap-4">
+                                <a href="#impact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">See the Need</a>
+                                <a href="#directory" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Find Help Now</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="slide-background">
-                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" alt="Diverse community members participating in wellness activities" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" alt="Diverse community members participating in wellness activities" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
                 </div>
             </div>
 
             <!-- Slide 3: Impact/Story -->
-            <div class="carousel-slide" data-slide="3">
-                <div class="slide-content">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-text">
-                        <h1 class="hero-title">Growing Together, Going Far Together</h1>
-                        <p class="hero-subtitle">Real Impact Through Community Connection</p>
-                        <p class="hero-description">From 2 co-founders to 500+ families connected to care. Through vulnerability, community, and culturally competent resources - we're creating lasting change.</p>
-                        <div class="hero-buttons">
-                            <a href="#programs" class="btn btn-primary">Join Our Programs</a>
-                            <a href="#donate" class="btn btn-secondary">Support the Mission</a>
+            <div class="carousel-slide absolute inset-0" data-slide="3">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+                    <div class="absolute inset-0 z-20 flex items-center justify-center">
+                        <div class="text-center text-white max-w-4xl px-4">
+                            <h1 class="text-5xl md:text-6xl font-bold mb-6 font-serif">Growing Together, Going Far Together</h1>
+                            <p class="text-xl md:text-2xl mb-4 font-medium">Real Impact Through Community Connection</p>
+                            <p class="text-lg mb-8 max-w-3xl mx-auto leading-relaxed">From 2 co-founders to 500+ families connected to care. Through vulnerability, community, and culturally competent resources - we're creating lasting change.</p>
+                            <div class="flex flex-wrap justify-center gap-4">
+                                <a href="#programs" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Join Our Programs</a>
+                                <a href="#donate" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Support the Mission</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="slide-background">
-                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Black and Brown community members walking together for mental health awareness" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Black and Brown community members walking together for mental health awareness" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
                 </div>
             </div>
 
             <!-- Carousel Navigation -->
-            <div class="carousel-nav">
-                <button class="carousel-btn prev-btn" aria-label="Previous slide">
+            <div class="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-8 z-30">
+                <button class="carousel-btn prev-btn bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm text-white w-12 h-12 rounded-full flex items-center justify-center transition-all" aria-label="Previous slide">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                <button class="carousel-btn next-btn" aria-label="Next slide">
+                <button class="carousel-btn next-btn bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm text-white w-12 h-12 rounded-full flex items-center justify-center transition-all" aria-label="Next slide">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
 
             <!-- Carousel Dots -->
-            <div class="carousel-dots">
-                <button class="dot active" data-slide="1" aria-label="Go to slide 1"></button>
-                <button class="dot" data-slide="2" aria-label="Go to slide 2"></button>
-                <button class="dot" data-slide="3" aria-label="Go to slide 3"></button>
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-30">
+                <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all active:bg-orange-500" data-slide="1" aria-label="Go to slide 1"></button>
+                <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all" data-slide="2" aria-label="Go to slide 2"></button>
+                <button class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all" data-slide="3" aria-label="Go to slide 3"></button>
             </div>
         </div>
     </section>
 
     <!-- The Problem Section -->
-    <section class="the-problem">
-        <div class="container">
-            <div class="section-header">
-                <h2>The Challenge We Face</h2>
-                <p>Mental health stigma in Black and Brown communities creates real barriers to healing</p>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">The Challenge We Face</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Mental health stigma in Black and Brown communities creates real barriers to healing</p>
             </div>
-            <div class="problem-grid">
-                <div class="problem-stat">
-                    <div class="stat-number">60%</div>
-                    <div class="stat-label">of Black adults avoid mental health treatment due to stigma</div>
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center p-8 bg-white rounded-2xl shadow-lg">
+                    <div class="text-5xl font-bold text-orange-500 mb-4 font-serif">60%</div>
+                    <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">of Black adults avoid mental health treatment due to stigma</div>
                 </div>
-                <div class="problem-stat">
-                    <div class="stat-number">3x</div>
-                    <div class="stat-label">less likely to receive culturally competent care</div>
+                <div class="text-center p-8 bg-white rounded-2xl shadow-lg">
+                    <div class="text-5xl font-bold text-orange-500 mb-4 font-serif">3x</div>
+                    <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">less likely to receive culturally competent care</div>
                 </div>
-                <div class="problem-stat">
-                    <div class="stat-number">75%</div>
-                    <div class="stat-label">report feeling misunderstood by providers</div>
+                <div class="text-center p-8 bg-white rounded-2xl shadow-lg">
+                    <div class="text-5xl font-bold text-orange-500 mb-4 font-serif">75%</div>
+                    <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">report feeling misunderstood by providers</div>
                 </div>
             </div>
-            <div class="problem-story">
-                <h3>Our founders experienced this firsthand</h3>
-                <p>Two people searching for community and struggling to find therapists who truly understood their cultural background. That search became a podcast, and that podcast became a movement.</p>
+            <div class="text-center max-w-4xl mx-auto">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Our founders experienced this firsthand</h3>
+                <p class="text-lg text-gray-600 leading-relaxed">Two people searching for community and struggling to find therapists who truly understood their cultural background. That search became a podcast, and that podcast became a movement.</p>
             </div>
         </div>
     </section>
 
     <!-- Our Programs Section -->
-    <section class="our-programs">
-        <div class="container">
-            <div class="section-header">
-                <h2>How We're Creating Change</h2>
-                <p>Leading with vulnerability, building with community</p>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">How We're Creating Change</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Leading with vulnerability, building with community</p>
             </div>
-            <div class="programs-grid">
-                <div class="program-card featured">
-                    <div class="program-badge">Signature Program</div>
-                    <div class="program-icon">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg border border-orange-200 relative">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Signature Program</div>
+                    <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white text-2xl mb-6">
                         <i class="fas fa-utensils"></i>
                     </div>
-                    <h3>Cooking for Calm</h3>
-                    <p>Live cooking sessions with amazing chefs who share their mental health journeys while teaching healthy cooking. Learn why nutrition and mental wellness go hand in hand.</p>
-                    <div class="program-features">
-                        <span><i class="fas fa-video"></i> Live Chef Sessions</span>
-                        <span><i class="fas fa-heart"></i> Mental Health Stories</span>
-                        <span><i class="fas fa-apple-alt"></i> Healthy Recipe Focus</span>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Cooking for Calm</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">Live cooking sessions with amazing chefs who share their mental health journeys while teaching healthy cooking. Learn why nutrition and mental wellness go hand in hand.</p>
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <span class="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                            <i class="fas fa-video text-orange-500"></i> Live Chef Sessions
+                        </span>
+                        <span class="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                            <i class="fas fa-heart text-orange-500"></i> Mental Health Stories
+                        </span>
+                        <span class="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                            <i class="fas fa-apple-alt text-orange-500"></i> Healthy Recipe Focus
+                        </span>
                     </div>
-                    <div class="program-buttons">
-                        <a href="#cooking" class="btn btn-primary">Join Next Session</a>
-                        <a href="#recipes" class="btn btn-secondary">Browse Recipes</a>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-icon">
-                        <i class="fas fa-walking"></i>
-                    </div>
-                    <h3>Walktober & 5K Events</h3>
-                    <p>Annual step challenge and walking events that encourage movement for mental wellness. Community building through shared physical activity.</p>
-                    <div class="program-buttons">
-                        <a href="#walktober" class="btn btn-primary">Join Walktober</a>
-                        <a href="#5k" class="btn btn-secondary">5K Registration</a>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#cooking" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">Join Next Session</a>
+                        <a href="#recipes" class="bg-white hover:bg-gray-50 text-orange-500 border-2 border-orange-500 px-6 py-3 rounded-lg font-semibold transition-colors">Browse Recipes</a>
                     </div>
                 </div>
-                <div class="program-card">
-                    <div class="program-icon">
-                        <i class="fas fa-comments"></i>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
+                        <div class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center text-white text-xl mb-4">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Walktober & 5K Events</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Annual step challenge and walking events that encourage movement for mental wellness. Community building through shared physical activity.</p>
+                        <div class="flex flex-col gap-2">
+                            <a href="#walktober" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold text-sm text-center transition-colors">Join Walktober</a>
+                            <a href="#5k" class="bg-white hover:bg-gray-50 text-orange-500 border border-orange-500 px-4 py-2 rounded-lg font-semibold text-sm text-center transition-colors">5K Registration</a>
+                        </div>
                     </div>
-                    <h3>Remove the Stigma Forums</h3>
-                    <p>Traveling in-person conversations with mental health professionals who understand our cultural differences and community needs.</p>
-                    <div class="program-buttons">
-                        <a href="#forums" class="btn btn-primary">Attend Forum</a>
-                        <a href="#professionals" class="btn btn-secondary">Meet Our Team</a>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white text-xl mb-4">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Remove the Stigma Forums</h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Traveling in-person conversations with mental health professionals who understand our cultural differences and community needs.</p>
+                        <div class="flex flex-col gap-2">
+                            <a href="#forums" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold text-sm text-center transition-colors">Attend Forum</a>
+                            <a href="#professionals" class="bg-white hover:bg-gray-50 text-orange-500 border border-orange-500 px-4 py-2 rounded-lg font-semibold text-sm text-center transition-colors">Meet Our Team</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -212,129 +285,140 @@
     </section>
 
     <!-- Podcasts & Communities Section -->
-    <section class="podcasts-communities">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Voices, Our Stories</h2>
-                <p>Three podcasts and two communities where vulnerability leads to healing</p>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Voices, Our Stories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Three podcasts and two communities where vulnerability leads to healing</p>
             </div>
-            <div class="podcast-grid">
-                <div class="podcast-card flagship">
-                    <div class="podcast-badge">Original Podcast</div>
-                    <div class="podcast-icon">
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg border border-orange-200 relative">
+                    <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Original Podcast</div>
+                    <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white text-2xl mb-6">
                         <i class="fas fa-microphone"></i>
                     </div>
-                    <h3>Getting My Cheese Back On My Cracker</h3>
-                    <p>Where it all started - difficult conversations that aren't being had in Black and Brown communities. Our founders share their journeys with vulnerability and authenticity.</p>
-                    <a href="#podcast1" class="btn btn-primary">Listen Now</a>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Getting My Cheese Back On My Cracker</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">Where it all started - difficult conversations that aren't being had in Black and Brown communities. Our founders share their journeys with vulnerability and authenticity.</p>
+                    <a href="#podcast1" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-block">Listen Now</a>
                 </div>
-                <div class="podcast-card">
-                    <div class="podcast-icon">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl mb-6">
                         <i class="fas fa-male"></i>
                     </div>
-                    <h3>The State of the Black Man's Mental Health</h3>
-                    <p>Focused conversations addressing mental health challenges specifically facing Black men, with a dedicated community for support.</p>
-                    <a href="#podcast2" class="btn btn-secondary">Listen & Join Community</a>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">The State of the Black Man's Mental Health</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Focused conversations addressing mental health challenges specifically facing Black men, with a dedicated community for support.</p>
+                    <a href="#podcast2" class="bg-white hover:bg-gray-50 text-orange-500 border-2 border-orange-500 px-6 py-3 rounded-lg font-semibold transition-colors inline-block">Listen & Join Community</a>
                 </div>
-                <div class="podcast-card">
-                    <div class="podcast-icon">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                    <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center text-white text-2xl mb-6">
                         <i class="fas fa-female"></i>
                     </div>
-                    <h3>The Wellness Collective</h3>
-                    <p>Safe space for women to share, grow, and engage with like-minded people on their wellness journey.</p>
-                    <a href="#podcast3" class="btn btn-secondary">Join Community</a>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">The Wellness Collective</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Safe space for women to share, grow, and engage with like-minded people on their wellness journey.</p>
+                    <a href="#podcast3" class="bg-white hover:bg-gray-50 text-orange-500 border-2 border-orange-500 px-6 py-3 rounded-lg font-semibold transition-colors inline-block">Join Community</a>
                 </div>
             </div>
-            <div class="community-highlight">
-                <h3>Safe Spaces for Growth</h3>
-                <p>Our gender-specific communities provide dedicated spaces where members can share experiences, find support, and grow together on their mental wellness journeys.</p>
+            <div class="text-center bg-white p-8 rounded-2xl shadow-lg max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Safe Spaces for Growth</h3>
+                <p class="text-lg text-gray-600 leading-relaxed">Our gender-specific communities provide dedicated spaces where members can share experiences, find support, and grow together on their mental wellness journeys.</p>
             </div>
         </div>
     </section>
 
     <!-- Impact Stories Section -->
-    <section class="impact-stories">
-        <div class="container">
-            <div class="section-header">
-                <h2>Stories of Impact</h2>
-                <p>Real testimonials from our community members</p>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Stories of Impact</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real testimonials from our community members</p>
             </div>
-            <div class="stories-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"The foundation's resource directory helped me find a therapist who truly understands my cultural background. For the first time, I felt heard."</div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
-                        <div class="author-info">
-                            <h4>Maria S.</h4>
-                            <p>Community Member</p>
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 relative">
+                    <div class="absolute -top-2 left-6 text-6xl text-orange-500 font-serif leading-none">"</div>
+                    <div class="pt-6 italic text-lg text-gray-700 mb-6">"The foundation's resource directory helped me find a therapist who truly understands my cultural background. For the first time, I felt heard."</div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-semibold">M</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Maria S.</h4>
+                            <p class="text-sm text-gray-600">Community Member</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"As a caregiver for my elderly mother, I felt invisible until I joined this community. Now I know I'm not alone."</div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">J</div>
-                        <div class="author-info">
-                            <h4>James T.</h4>
-                            <p>Caregiver</p>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 relative">
+                    <div class="absolute -top-2 left-6 text-6xl text-orange-500 font-serif leading-none">"</div>
+                    <div class="pt-6 italic text-lg text-gray-700 mb-6">"As a caregiver for my elderly mother, I felt invisible until I joined this community. Now I know I'm not alone."</div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-semibold">J</div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">James T.</h4>
+                            <p class="text-sm text-gray-600">Caregiver</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="impact-stats">
-                <div class="stat-item">
-                    <div class="stat-number">30,000+</div>
-                    <div class="stat-label">Miles Logged Last Year</div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-orange-500 mb-2 font-serif">30,000+</div>
+                    <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Miles Logged Last Year</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Families Connected to Resources</div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-orange-500 mb-2 font-serif">500+</div>
+                    <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Families Connected to Resources</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">100+</div>
-                    <div class="stat-label">Culturally Competent Providers</div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-orange-500 mb-2 font-serif">100+</div>
+                    <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Culturally Competent Providers</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">25</div>
-                    <div class="stat-label">Community Partners</div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-orange-500 mb-2 font-serif">25</div>
+                    <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Community Partners</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Directory Highlight Section -->
-    <section class="directory-highlight">
-        <div class="container">
-            <div class="section-header">
-                <h2>Find Your Perfect Match</h2>
-                <p>Businesses and providers who understand our community's unique needs</p>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Find Your Perfect Match</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Businesses and providers who understand our community's unique needs</p>
             </div>
-            <div class="directory-preview">
-                <div class="directory-hero">
-                    <div class="directory-icon">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center text-white text-2xl mb-6">
                         <i class="fas fa-search"></i>
                     </div>
-                    <h3>Provider Directory</h3>
-                    <p>We're developing a comprehensive directory of businesses capable of serving our community - helping people get their cheese back on their cracker through culturally competent care.</p>
-                    <div class="directory-features">
-                        <span><i class="fas fa-check"></i> Culturally Competent Providers</span>
-                        <span><i class="fas fa-check"></i> Community-Vetted Businesses</span>
-                        <span><i class="fas fa-check"></i> Lived Experience Focus</span>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Provider Directory</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">We're developing a comprehensive directory of businesses capable of serving our community - helping people get their cheese back on their cracker through culturally competent care.</p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check text-teal-500"></i>
+                            <span class="text-gray-700 font-medium">Culturally Competent Providers</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check text-teal-500"></i>
+                            <span class="text-gray-700 font-medium">Community-Vetted Businesses</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check text-teal-500"></i>
+                            <span class="text-gray-700 font-medium">Lived Experience Focus</span>
+                        </div>
                     </div>
-                    <a href="#directory" class="btn btn-primary">Access Directory</a>
+                    <a href="#directory" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-block">Access Directory</a>
                 </div>
-                <div class="directory-stats">
-                    <div class="stat-card">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Verified Providers</div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-3xl font-bold text-orange-500 mb-2 font-serif">100+</div>
+                        <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Verified Providers</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">15</div>
-                        <div class="stat-label">Service Categories</div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-3xl font-bold text-orange-500 mb-2 font-serif">15</div>
+                        <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Service Categories</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Community Reviews</div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-3xl font-bold text-orange-500 mb-2 font-serif">500+</div>
+                        <div class="text-sm font-semibold text-gray-700 uppercase tracking-wide">Community Reviews</div>
                     </div>
                 </div>
             </div>
@@ -342,89 +426,89 @@
     </section>
 
     <!-- Get Involved Section -->
-    <section class="get-involved">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get Involved</h2>
-                <p>Multiple ways to support mental wellness in our communities</p>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Get Involved</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Multiple ways to support mental wellness in our communities</p>
             </div>
-            <div class="involvement-grid">
-                <div class="involvement-card primary">
-                    <div class="involvement-icon">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg border border-orange-200 text-center">
+                    <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white text-2xl mb-6 mx-auto">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h3>Donate</h3>
-                    <p>Support our programs and help expand mental health resources.</p>
-                    <a href="#donate" class="btn btn-primary">Donate Now</a>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Donate</h3>
+                    <p class="text-gray-700 mb-6">Support our programs and help expand mental health resources.</p>
+                    <a href="#donate" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-block">Donate Now</a>
                 </div>
-                <div class="involvement-card">
-                    <div class="involvement-icon">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center text-white text-2xl mb-6 mx-auto">
                         <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h3>Volunteer</h3>
-                    <p>Join our events, help with outreach, or share your skills with the community.</p>
-                    <a href="#volunteer" class="btn btn-secondary">Get Started</a>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Volunteer</h3>
+                    <p class="text-gray-600 mb-6">Join our events, help with outreach, or share your skills with the community.</p>
+                    <a href="#volunteer" class="bg-white hover:bg-gray-50 text-orange-500 border-2 border-orange-500 px-6 py-3 rounded-lg font-semibold transition-colors inline-block">Get Started</a>
                 </div>
-                <div class="involvement-card">
-                    <div class="involvement-icon">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 text-center">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white text-2xl mb-6 mx-auto">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <h3>Stay Updated</h3>
-                    <p>Subscribe for event notifications, resource updates, and community news.</p>
-                    <a href="#newsletter" class="btn btn-secondary">Subscribe</a>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Stay Updated</h3>
+                    <p class="text-gray-600 mb-6">Subscribe for event notifications, resource updates, and community news.</p>
+                    <a href="#newsletter" class="bg-white hover:bg-gray-50 text-orange-500 border-2 border-orange-500 px-6 py-3 rounded-lg font-semibold transition-colors inline-block">Subscribe</a>
                 </div>
             </div>
-            <div class="quick-actions">
-                <h3>Quick Actions</h3>
-                <div class="action-buttons">
-                    <a href="#events" class="btn btn-outline">Join Events</a>
-                    <a href="#directory" class="btn btn-outline">Browse Directory</a>
-                    <a href="#social" class="btn btn-outline">Follow Us</a>
+            <div class="text-center bg-gray-100 p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#events" class="bg-white hover:bg-gray-50 text-gray-900 border-2 border-gray-300 px-6 py-3 rounded-lg font-semibold transition-colors">Join Events</a>
+                    <a href="#directory" class="bg-white hover:bg-gray-50 text-gray-900 border-2 border-gray-300 px-6 py-3 rounded-lg font-semibold transition-colors">Browse Directory</a>
+                    <a href="#social" class="bg-white hover:bg-gray-50 text-gray-900 border-2 border-gray-300 px-6 py-3 rounded-lg font-semibold transition-colors">Follow Us</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact & Help Section -->
-    <section class="contact-help">
-        <div class="container">
-            <div class="help-grid">
-                <div class="help-section">
-                    <h2>Need Mental Health Support?</h2>
-                    <p>If you're in crisis or need immediate support, here are resources available 24/7:</p>
-                    <div class="crisis-resources">
-                        <div class="crisis-item">
-                            <strong>National Suicide Prevention Lifeline</strong>
-                            <span>988</span>
+    <section class="py-20 bg-red-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-red-200">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Need Mental Health Support?</h2>
+                    <p class="text-lg text-gray-600 mb-8">If you're in crisis or need immediate support, here are resources available 24/7:</p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex justify-between items-center p-4 bg-red-50 rounded-lg border border-red-200">
+                            <strong class="text-gray-900">National Suicide Prevention Lifeline</strong>
+                            <span class="text-red-600 font-bold text-lg">988</span>
                         </div>
-                        <div class="crisis-item">
-                            <strong>Crisis Text Line</strong>
-                            <span>Text HOME to 741741</span>
+                        <div class="flex justify-between items-center p-4 bg-red-50 rounded-lg border border-red-200">
+                            <strong class="text-gray-900">Crisis Text Line</strong>
+                            <span class="text-red-600 font-bold">Text HOME to 741741</span>
                         </div>
-                        <div class="crisis-item">
-                            <strong>SAMHSA National Helpline</strong>
-                            <span>1-800-662-4357</span>
+                        <div class="flex justify-between items-center p-4 bg-red-50 rounded-lg border border-red-200">
+                            <strong class="text-gray-900">SAMHSA National Helpline</strong>
+                            <span class="text-red-600 font-bold">1-800-662-4357</span>
                         </div>
                     </div>
-                    <a href="#directory" class="btn btn-primary">Find Local Support</a>
+                    <a href="#directory" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-block">Find Local Support</a>
                 </div>
-                <div class="contact-section">
-                    <h3>Questions? We're Here to Help</h3>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Questions? We're Here to Help</h3>
+                    <form class="space-y-4 mb-6">
+                        <div>
+                            <input type="text" placeholder="Your Name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
                         </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                        <div>
+                            <input type="email" placeholder="Your Email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
                         </div>
-                        <div class="form-group">
-                            <textarea placeholder="How can we help you?" rows="4" required></textarea>
+                        <div>
+                            <textarea placeholder="How can we help you?" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors resize-none"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors">Send Message</button>
                     </form>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> info@cheeseonmycracker.com</p>
-                        <p><i class="fas fa-phone"></i> Available via email</p>
+                    <div class="space-y-2 text-gray-600">
+                        <p class="flex items-center gap-2"><i class="fas fa-envelope text-orange-500"></i> info@cheeseonmycracker.com</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-phone text-orange-500"></i> Available via email</p>
                     </div>
                 </div>
             </div>
@@ -432,96 +516,106 @@
     </section>
 
     <!-- Trust & Momentum Section -->
-    <section class="trust-momentum">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Trusted Partners</h2>
-                <p>Working together to expand mental health access</p>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Trusted Partners</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Working together to expand mental health access</p>
             </div>
-            <div class="partner-showcase">
-                <div class="partners-carousel">
-                    <div class="partners-track">
-                        <div class="partner-slide">
-                            <div class="partner-logo">CareSync</div>
-                            <div class="partner-logo">Community Health Alliance</div>
-                            <div class="partner-logo">Wellness Coalition</div>
+            <div class="grid lg:grid-cols-3 gap-12 items-center">
+                <div class="lg:col-span-2">
+                    <div class="partners-carousel relative overflow-hidden bg-white rounded-2xl shadow-lg p-8">
+                        <div class="partners-track flex transition-transform duration-500 ease-in-out">
+                            <div class="partner-slide w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="partner-logo bg-gray-100 p-6 rounded-xl text-center font-semibold text-gray-700 hover:bg-orange-50 transition-colors">CareSync</div>
+                                <div class="partner-logo bg-gray-100 p-6 rounded-xl text-center font-semibold text-gray-700 hover:bg-orange-50 transition-colors">Community Health Alliance</div>
+                                <div class="partner-logo bg-gray-100 p-6 rounded-xl text-center font-semibold text-gray-700 hover:bg-orange-50 transition-colors">Wellness Coalition</div>
+                            </div>
+                            <div class="partner-slide w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="partner-logo bg-gray-100 p-6 rounded-xl text-center font-semibold text-gray-700 hover:bg-orange-50 transition-colors">Mental Health Georgia</div>
+                                <div class="partner-logo bg-gray-100 p-6 rounded-xl text-center font-semibold text-gray-700 hover:bg-orange-50 transition-colors">Black Mental Health</div>
+                                <div class="partner-logo bg-gray-100 p-6 rounded-xl text-center font-semibold text-gray-700 hover:bg-orange-50 transition-colors">NAMI Atlanta</div>
+                            </div>
+                            <div class="partner-slide w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="partner-logo bg-gray-100 p-6 rounded-xl text-center font-semibold text-gray-700 hover:bg-orange-50 transition-colors">Georgia Crisis & Access Line</div>
+                                <div class="partner-logo bg-gray-100 p-6 rounded-xl text-center font-semibold text-gray-700 hover:bg-orange-50 transition-colors">Therapy for Black Girls</div>
+                                <div class="partner-logo bg-gray-100 p-6 rounded-xl text-center font-semibold text-gray-700 hover:bg-orange-50 transition-colors">National Alliance on Mental Illness</div>
+                            </div>
                         </div>
-                        <div class="partner-slide">
-                            <div class="partner-logo">Mental Health Georgia</div>
-                            <div class="partner-logo">Black Mental Health</div>
-                            <div class="partner-logo">NAMI Atlanta</div>
+                        <div class="partners-nav absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-4 pointer-events-none">
+                            <button class="partners-btn prev-partners bg-white hover:bg-gray-50 shadow-lg rounded-full w-12 h-12 flex items-center justify-center text-gray-600 hover:text-orange-500 transition-colors pointer-events-auto" aria-label="Previous partners">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="partners-btn next-partners bg-white hover:bg-gray-50 shadow-lg rounded-full w-12 h-12 flex items-center justify-center text-gray-600 hover:text-orange-500 transition-colors pointer-events-auto" aria-label="Next partners">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
                         </div>
-                        <div class="partner-slide">
-                            <div class="partner-logo">Georgia Crisis & Access Line</div>
-                            <div class="partner-logo">Therapy for Black Girls</div>
-                            <div class="partner-logo">National Alliance on Mental Illness</div>
+                        <div class="partners-dots flex justify-center gap-2 mt-6">
+                            <button class="partner-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-orange-500 transition-colors active:bg-orange-500" data-slide="0" aria-label="Partners group 1"></button>
+                            <button class="partner-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-orange-500 transition-colors" data-slide="1" aria-label="Partners group 2"></button>
+                            <button class="partner-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-orange-500 transition-colors" data-slide="2" aria-label="Partners group 3"></button>
                         </div>
-                    </div>
-                    <div class="partners-nav">
-                        <button class="partners-btn prev-partners" aria-label="Previous partners">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="partners-btn next-partners" aria-label="Next partners">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-                    <div class="partners-dots">
-                        <button class="partner-dot active" data-slide="0" aria-label="Partners group 1"></button>
-                        <button class="partner-dot" data-slide="1" aria-label="Partners group 2"></button>
-                        <button class="partner-dot" data-slide="2" aria-label="Partners group 3"></button>
                     </div>
                 </div>
-                <div class="community-callout">
-                    <h3>Join Our Growing Community</h3>
-                    <p>Connect with others on similar journeys, share resources, and find support.</p>
-                    <a href="#community" class="btn btn-primary">Join Community</a>
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Join Our Growing Community</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Connect with others on similar journeys, share resources, and find support.</p>
+                    <a href="#community" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-block">Join Community</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Getting My Cheese Back On My Cracker Foundation</h3>
-                    <p>Improving mental health and wellness within Black and Brown communities.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Getting My Cheese Back On My Cracker Foundation</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Improving mental health and wellness within Black and Brown communities.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#resources">Resources</a></li>
-                        <li><a href="#events">Events</a></li>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="#resources" class="text-gray-400 hover:text-white transition-colors">Resources</a></li>
+                        <li><a href="#events" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Get Involved</h4>
-                    <ul>
-                        <li><a href="#volunteer">Volunteer</a></li>
-                        <li><a href="#donate">Donate</a></li>
-                        <li><a href="#partner">Partner With Us</a></li>
-                        <li><a href="#newsletter">Newsletter</a></li>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#volunteer" class="text-gray-400 hover:text-white transition-colors">Volunteer</a></li>
+                        <li><a href="#donate" class="text-gray-400 hover:text-white transition-colors">Donate</a></li>
+                        <li><a href="#partner" class="text-gray-400 hover:text-white transition-colors">Partner With Us</a></li>
+                        <li><a href="#newsletter" class="text-gray-400 hover:text-white transition-colors">Newsletter</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Stay Connected</h4>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Stay Connected</h4>
+                    <form class="newsletter-form space-y-3">
+                        <input type="email" placeholder="Enter your email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors">Subscribe</button>
                     </form>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Getting My Cheese Back On My Cracker Foundation. All rights reserved.</p>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Getting My Cheese Back On My Cracker Foundation. All rights reserved.</p>
             </div>
         </div>
     </footer>

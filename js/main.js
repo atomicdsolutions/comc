@@ -77,11 +77,23 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        // Add/remove scrolled class for styling
+        // Add/remove scrolled class for styling with Tailwind
         if (scrollTop > 100) {
-            navbar.classList.add('scrolled');
+            navbar.classList.add('bg-white', 'shadow-lg');
+            navbar.classList.remove('bg-transparent');
+            // Update text color for scrolled state
+            navbar.querySelectorAll('.nav-link, h2').forEach(el => {
+                el.classList.remove('text-white');
+                el.classList.add('text-gray-900');
+            });
         } else {
-            navbar.classList.remove('scrolled');
+            navbar.classList.add('bg-transparent');
+            navbar.classList.remove('bg-white', 'shadow-lg');
+            // Update text color for transparent state
+            navbar.querySelectorAll('.nav-link, h2').forEach(el => {
+                el.classList.remove('text-gray-900');
+                el.classList.add('text-white');
+            });
         }
         
         lastScrollTop = scrollTop;
@@ -292,18 +304,12 @@ document.addEventListener('DOMContentLoaded', function() {
             heroContent.classList.add('fade-in-up');
         }
         
-        // Add staggered animation to various cards (excluding program cards to avoid disappearing)
+        // Skip animations for program cards to prevent disappearing
+        // Add staggered animation to other cards only
         const animateCards = document.querySelectorAll('.podcast-card, .testimonial-card');
         animateCards.forEach((card, index) => {
             card.style.animationDelay = `${index * 0.1}s`;
             card.classList.add('animate-on-scroll');
-        });
-        
-        // Add lighter animation to program cards to avoid disappearing
-        const programCards = document.querySelectorAll('.program-card');
-        programCards.forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.1}s`;
-            card.classList.add('slide-in-left');
         });
     }
     
