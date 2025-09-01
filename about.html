@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Getting My Cheese Back On My Cracker Foundation</title>
+    <meta name="description" content="Learn about GMCBOMC Foundation's mission to provide culturally competent mental health support for Black and Brown communities. Meet our board and get answers to common questions.">
+    <meta name="keywords" content="About GMCBOMC Foundation, Black mental health organization, culturally competent therapy board, BIPOC mental health advocacy leadership, diverse mental health foundation">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Us | GMCBOMC Foundation">
+    <meta property="og:description" content="Learn about our mission to provide culturally competent mental health support for Black and Brown communities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://atomicdsolutions.github.io/comc/about.html">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'orange': {
+                            500: '#FF9500'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS for navigation -->
+    <style>
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+        
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+        
+        .nav-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="nav-logo">
+                    <h2 class="text-2xl font-bold text-gray-900">GMCBOMC Foundation</h2>
+                </div>
+                <ul class="nav-menu hidden md:flex space-x-8">
+                    <li><a href="index.html" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Home</a></li>
+                    <li><a href="about.html" class="nav-link text-orange-500 font-semibold">About</a></li>
+                    <li><a href="#programs" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Programs</a></li>
+                    <li><a href="#resources" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Resources</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-900 hover:text-orange-500 font-medium transition-colors">Contact</a></li>
+                    <li><a href="#donate" class="nav-link bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">Donate</a></li>
+                </ul>
+                <div class="hamburger md:hidden flex flex-col justify-center items-center w-8 h-8 cursor-pointer">
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 mb-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <ul class="nav-menu md:hidden bg-gray-900 bg-opacity-95 absolute top-full left-0 right-0 px-4 py-6 space-y-4 transform -translate-y-full opacity-0 transition-all duration-300">
+                <li><a href="index.html" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Home</a></li>
+                <li><a href="about.html" class="nav-link block text-orange-500 font-semibold py-2">About</a></li>
+                <li><a href="#programs" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Programs</a></li>
+                <li><a href="#resources" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Resources</a></li>
+                <li><a href="#contact" class="nav-link block text-white hover:text-orange-500 font-medium py-2 transition-colors">Contact</a></li>
+                <li><a href="#donate" class="nav-link block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-orange-50 to-orange-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl font-bold text-gray-900 mb-6 font-serif">About Our Foundation</h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">Learn more about our mission to break mental health stigma in Black and Brown communities through culturally competent care and community advocacy.</p>
+        </div>
+    </section>
+
+    <!-- About The Foundation Section -->
+    <section id="about-foundation" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">About The Foundation</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our story, mission, and commitment to culturally competent mental health advocacy</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Origin Story</h3>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">The Getting My Cheese Back On My Cracker Foundation was born from a simple but powerful need: two co-founders searching for community and struggling to find therapists who truly understood their cultural background and lived experiences.</p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">What started as personal conversations about mental health challenges in Black and Brown communities evolved into a podcast, and that podcast became a movement dedicated to breaking down barriers and reducing stigma.</p>
+                    <p class="text-lg text-gray-700 leading-relaxed">Today, we lead with vulnerability, sharing our mental health journeys so others can see themselves in our stories and know they're not alone in their struggles.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Community members in supportive discussion" class="w-full rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                </div>
+            </div>
+            
+            <!-- Mission & Vision -->
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div class="bg-orange-50 p-8 rounded-2xl border border-orange-200">
+                    <div class="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                    <p class="text-gray-700 leading-relaxed">To improve mental health and wellness within Black and Brown communities by providing culturally competent resources, breaking down stigma, and creating safe spaces for healing and growth.</p>
+                </div>
+                <div class="bg-teal-50 p-8 rounded-2xl border border-teal-200">
+                    <div class="w-16 h-16 bg-teal-500 rounded-2xl flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                    <p class="text-gray-700 leading-relaxed">A world where every person in Black and Brown communities has access to culturally sensitive mental health support and feels empowered to prioritize their mental wellness without shame or judgment.</p>
+                </div>
+            </div>
+            
+            <!-- Core Values -->
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 mb-8">Our Core Values</h3>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-orange-500 rounded-full flex items-center justify-center text-white text-2xl mb-4 mx-auto">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Vulnerability</h4>
+                        <p class="text-gray-600">Leading with authenticity and openness to create genuine connections</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center text-white text-2xl mb-4 mx-auto">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Community</h4>
+                        <p class="text-gray-600">Building supportive networks where everyone belongs and feels understood</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center text-white text-2xl mb-4 mx-auto">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Cultural Competence</h4>
+                        <p class="text-gray-600">Honoring diverse backgrounds and providing culturally sensitive support</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl mb-4 mx-auto">
+                            <i class="fas fa-fist-raised"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Advocacy</h4>
+                        <p class="text-gray-600">Fighting for systemic change and equal access to quality mental health care</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Messages Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Messages from Our Leadership</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Hear directly from our founders about our vision and commitment to the community</p>
+            </div>
+            
+            <!-- CEO Message -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center gap-6 mb-6">
+                        <div class="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white text-lg font-bold flex-shrink-0">
+                            PB
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-1">Peuge Benjamin</h3>
+                            <p class="text-orange-500 font-semibold">CEO, Executive Director & Co-Founder</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -top-2 -left-2 text-6xl text-orange-500 font-serif leading-none opacity-20">"</div>
+                        <blockquote class="text-lg text-gray-700 leading-relaxed italic pl-8">
+                            <p class="mb-4">When we started this foundation, we never imagined it would grow into the movement it is today. What began as two people struggling to find culturally competent mental health care has become a beacon of hope for thousands in our communities.</p>
+                            <p class="mb-4">Our mission is deeply personal - it's rooted in our own experiences of feeling unseen and misunderstood in traditional mental health spaces. We're committed to ensuring that no one else has to navigate their mental health journey feeling alone or culturally disconnected.</p>
+                            <p>Every program we create, every partnership we build, and every story we share is designed to break down the barriers that have kept our communities from accessing the care they deserve. Together, we're not just getting our cheese back on our crackers - we're creating a whole new table where everyone belongs.</p>
+                        </blockquote>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <p class="text-sm text-gray-600 font-medium">- Peuge Benjamin, CEO & Co-Founder</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional man in leadership discussion" class="w-full rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                </div>
+            </div>
+            
+            <!-- Board Chair Message -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-gray-50 p-8 rounded-2xl lg:order-1">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional man in leadership discussion" class="w-full rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg lg:order-2">
+                    <div class="flex items-center gap-6 mb-6">
+                        <div class="w-24 h-24 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white text-lg font-bold flex-shrink-0">
+                            JB
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-1">Jacqueline Benjamin</h3>
+                            <p class="text-teal-500 font-semibold">Board Chair</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -top-2 -left-2 text-6xl text-teal-500 font-serif leading-none opacity-20">"</div>
+                        <blockquote class="text-lg text-gray-700 leading-relaxed italic pl-8">
+                            <p class="mb-4">As Board Chair, I'm incredibly proud of how our foundation has stayed true to its core mission while expanding our reach and impact. We've maintained our commitment to authenticity and vulnerability, which are the cornerstones of everything we do.</p>
+                            <p class="mb-4">Our board represents diverse voices and expertise, all united by a shared passion for mental health equity. We bring together lived experience, clinical knowledge, policy expertise, and community organizing skills to ensure our foundation operates with both heart and strategic vision.</p>
+                            <p>The work we're doing isn't just about providing services - it's about transforming how mental health care is delivered to communities of color. We're building something sustainable that will continue serving our communities for generations to come.</p>
+                        </blockquote>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <p class="text-sm text-gray-600 font-medium">- Jacqueline Benjamin, Board Chair</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Board Section -->
+    <section id="our-board" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Board</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Meet the dedicated leaders driving our mission forward with expertise, passion, and lived experience</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Co-Founder 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="w-32 h-32 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white text-4xl font-bold mb-6 mx-auto">
+                        CF
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Co-Founder</h3>
+                    <p class="text-orange-500 font-semibold mb-4">Founder & Executive Director</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Passionate advocate for mental health equity in Black communities. Brings lived experience and professional background in community organizing to drive systemic change.</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-200 hover:bg-orange-500 hover:text-white rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-200 hover:bg-orange-500 hover:text-white rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Co-Founder 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="w-32 h-32 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white text-4xl font-bold mb-6 mx-auto">
+                        CF
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Co-Founder</h3>
+                    <p class="text-teal-500 font-semibold mb-4">Founder & Program Director</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Mental health advocate focused on creating culturally competent resources for Brown communities. Expertise in program development and community engagement strategies.</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-200 hover:bg-teal-500 hover:text-white rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-200 hover:bg-teal-500 hover:text-white rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Board Member 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="w-32 h-32 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold mb-6 mx-auto">
+                        BM
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Board Member</h3>
+                    <p class="text-purple-500 font-semibold mb-4">Licensed Clinical Social Worker</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Licensed therapist specializing in trauma-informed care for communities of color. Brings clinical expertise and cultural competency training experience to our mission.</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-200 hover:bg-purple-500 hover:text-white rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Board Member 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="w-32 h-32 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-4xl font-bold mb-6 mx-auto">
+                        BM
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Board Member</h3>
+                    <p class="text-blue-500 font-semibold mb-4">Community Health Advocate</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Public health professional with expertise in health equity and community-based interventions. Focuses on addressing systemic barriers to mental health access.</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-200 hover:bg-blue-500 hover:text-white rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Board Member 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="w-32 h-32 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center text-white text-4xl font-bold mb-6 mx-auto">
+                        BM
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Board Member</h3>
+                    <p class="text-pink-500 font-semibold mb-4">Nonprofit Operations Specialist</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Experienced in nonprofit management and strategic planning. Ensures operational excellence and sustainable growth to maximize our community impact.</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-200 hover:bg-pink-500 hover:text-white rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Advisory Board Member -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow">
+                    <div class="w-32 h-32 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white text-4xl font-bold mb-6 mx-auto">
+                        AB
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Advisory Board</h3>
+                    <p class="text-green-500 font-semibold mb-4">Mental Health Policy Expert</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Policy researcher and advocate working on mental health legislation and funding initiatives. Provides strategic guidance on systemic change and advocacy efforts.</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-200 hover:bg-green-500 hover:text-white rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Join Our Team CTA -->
+            <div class="text-center bg-gray-100 p-12 rounded-2xl">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Join Our Mission</h3>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">We're always looking for passionate individuals who share our commitment to mental health equity and cultural competence.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#volunteer" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">Volunteer With Us</a>
+                    <a href="#board-application" class="bg-white hover:bg-gray-50 text-orange-500 border-2 border-orange-500 px-8 py-3 rounded-lg font-semibold transition-colors">Board Opportunities</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Common questions about our foundation and culturally competent mental health services</p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- FAQ Item 1 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <button class="faq-button w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-900">What makes mental health care "culturally competent"?</h3>
+                        <i class="fas fa-plus text-orange-500 text-xl"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-700 leading-relaxed">
+                        <p>Culturally competent mental health care involves providers who understand and respect the cultural backgrounds, values, and experiences of their clients. This includes awareness of how factors like race, ethnicity, language, religion, and socioeconomic status impact mental health. Culturally competent therapists adapt their approaches to be more effective for diverse communities and address unique challenges like racial trauma and intergenerational stress.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <button class="faq-button w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-900">How do I find a Black or Brown therapist through your directory?</h3>
+                        <i class="fas fa-plus text-orange-500 text-xl"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-700 leading-relaxed hidden">
+                        <p>Our provider directory is currently in development and will feature verified, culturally competent mental health professionals who understand the unique experiences of Black and Brown communities. You can join our newsletter to be notified when the directory launches, or reach out to us directly for current recommendations and resources.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <button class="faq-button w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-900">What programs do you offer for mental health support?</h3>
+                        <i class="fas fa-plus text-orange-500 text-xl"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-700 leading-relaxed hidden">
+                        <p>We offer several community programs including Cooking for Calm (live cooking sessions with mental health conversations), Walktober & 5K events (movement for mental wellness), Remove the Stigma Forums (in-person conversations with mental health professionals), and three podcasts that create safe spaces for sharing and growth.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <button class="faq-button w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-900">How can I get involved with the foundation?</h3>
+                        <i class="fas fa-plus text-orange-500 text-xl"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-700 leading-relaxed hidden">
+                        <p>There are many ways to support our mission: volunteer at events, join our programs, participate in our communities, donate to support our work, or apply for board positions. You can also help by sharing our resources with others who might benefit and following us on social media to amplify our message.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <button class="faq-button w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-900">Is your foundation only for Black and Brown communities?</h3>
+                        <i class="fas fa-plus text-orange-500 text-xl"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-700 leading-relaxed hidden">
+                        <p>While our foundation specifically focuses on addressing the unique mental health challenges faced by Black and Brown communities, we welcome allies and supporters from all backgrounds who share our commitment to mental health equity and cultural competence. Our resources and advocacy work benefit the broader movement for inclusive mental health care.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 6 -->
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <button class="faq-button w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-900">Where does the name "Getting My Cheese Back On My Cracker" come from?</h3>
+                        <i class="fas fa-plus text-orange-500 text-xl"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-700 leading-relaxed hidden">
+                        <p>The name reflects the universal experience of feeling like something essential is missing from your life - like cheese sliding off a cracker. It represents the journey of mental wellness: finding balance, getting back to wholeness, and helping others do the same. It's about vulnerability, authenticity, and the community support needed to heal and thrive.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact CTA -->
+            <div class="text-center mt-16 bg-orange-50 p-8 rounded-2xl border border-orange-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Still Have Questions?</h3>
+                <p class="text-lg text-gray-600 mb-6">We're here to help and would love to connect with you</p>
+                <a href="index.html#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-block">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">Getting My Cheese Back On My Cracker Foundation</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Improving mental health and wellness within Black and Brown communities.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#programs" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="#resources" class="text-gray-400 hover:text-white transition-colors">Resources</a></li>
+                        <li><a href="#events" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#volunteer" class="text-gray-400 hover:text-white transition-colors">Volunteer</a></li>
+                        <li><a href="#donate" class="text-gray-400 hover:text-white transition-colors">Donate</a></li>
+                        <li><a href="#partner" class="text-gray-400 hover:text-white transition-colors">Partner With Us</a></li>
+                        <li><a href="#newsletter" class="text-gray-400 hover:text-white transition-colors">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Stay Connected</h4>
+                    <form class="newsletter-form space-y-3">
+                        <input type="email" placeholder="Enter your email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Getting My Cheese Back On My Cracker Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- FAQ Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqButtons = document.querySelectorAll('.faq-button');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const answer = this.parentElement.querySelector('.faq-answer');
+                    const icon = this.querySelector('i');
+                    
+                    // Toggle answer visibility
+                    answer.classList.toggle('hidden');
+                    
+                    // Toggle icon
+                    if (answer.classList.contains('hidden')) {
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                    } else {
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
